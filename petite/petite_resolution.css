@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
@@ -51,6 +52,91 @@ header {
   color: white;
   background: linear-gradient(135deg, #eb72da, #ad5edb);
   border-radius: 50px;
+}
+
+.fonction {
+  padding: 10%;
+}
+.fonction h1 {
+  font-family: Roboto;
+  margin-bottom: 7%;
+}
+.fonction-bulle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin-bottom: 5%;
+  height: 60px;
+}
+.fonction-bulle__rond {
+  background-color: #9356dc;
+  height: 22px;
+  width: 22px;
+  border-radius: 50px;
+  margin-right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  right: 3%;
+}
+.fonction-bulle__label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+}
+.fonction-bulle i {
+  margin-right: 3%;
+  color: #7e7e7e;
+}
+.fonction-bulle:hover {
+  background-color: #f5edff;
+}
+.fonction-bulle:hover i {
+  color: #9356dc;
+}
+
+.restau {
+  /* style de l'ensemble de la section,
+
+  le background color
+  reprendre les padding de la section précédente peut-être
+  */
+}
+.restau-etiquette {
+  /*style des coins carrés 
+  la largeur en %age du bloc conteneur
+  display flex peut-être
+  les marges bottom
+  les marges left et right
+  */
+}
+.restau-etiquette img {
+  /* width à 100%
+  une hauteur en pixel
+  object-fit: cover   
+  peut-être des border-radius pour les coins haut gauche et haut droit */
+}
+.restau-etiquette__descrip {
+  /*display: grid;
+      grid-template-columns: 1fr 1fr;   */
+}
+.restau-etiquette__descrip--nom {
+  /* en gras */
+}
+.restau-etiquette__descrip i {
+  /* couleur */
+}
+.restau-etiquette__descrip i:activ {
+  /* la couleur de fond se remplit 
+  peut être usage des pseudo-elements ::after */
+}
+.restau-etiquette__descrip--quartier {
+  /* peut être sa position dans le grid */
 }
 
 /*# sourceMappingURL=petite_resolution.css.map */

@@ -69,3 +69,130 @@ header{
         border-radius: 50px;
     }
 }
+
+.fonction{
+
+    padding: 10%;
+    
+
+    h1{
+        font-family: Roboto;
+        margin-bottom: 7%;
+    }
+
+    &-bulle{
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+
+        border-radius: 20px;
+        background-color: #f6f6f6;
+        margin-bottom: 5%;
+        height: 60px;
+        
+
+        &__rond{
+            background-color: #9356dc;
+            height: 22px;
+            width: 22px;
+            border-radius: 50px;
+            margin-right: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            right: 3%;
+        }
+
+        &__label{
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 85%;
+        }
+
+        i{
+
+            margin-right: 3%;
+            color: #7e7e7e;
+            
+        }
+
+        &:hover{
+
+            background-color: #f5edff;
+
+            i{
+                color: #9356dc;
+            }
+        }
+
+
+    }
+
+
+}
+
+
+.restau{
+    
+
+    /* style de l'ensemble de la section,
+
+    le background color
+    reprendre les padding de la section précédente peut-être
+    */
+
+    &-etiquette{
+    
+        /*style des coins carrés 
+        la largeur en %age du bloc conteneur
+        display flex peut-être
+        les marges bottom
+        les marges left et right
+        */
+
+        img{
+            /* width à 100%
+            une hauteur en pixel
+            object-fit: cover   
+            peut-être des border-radius pour les coins haut gauche et haut droit */
+        }
+
+        &__descrip{
+
+            /*display: grid;
+                grid-template-columns: 1fr 1fr;   */
+
+            &--nom{
+
+                /* en gras */
+            }    
+
+            i{
+                /* couleur */
+
+                &:activ{
+                    /* la couleur de fond se remplit 
+                    peut être usage des pseudo-elements ::after */
+                }
+            }
+
+            &--quartier{
+                /* peut être sa position dans le grid */
+            }
+        }
+    
+
+    }
+
+
+
+
+
+
+}
