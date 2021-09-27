@@ -4,8 +4,8 @@
   "description": "Projet 3 OpenClassRooms",
   "main": "index.js",
   "scripts": {
-       "sass": "sass --watch ./petite/mainPetite.scss:./petite/petite_resolution.css",
-       "prefix":"postcss ./petite/petite_resolution.css --use autoprefixer -d ./petite/prefixed/" 
+       "sass": "sass --watch ./petite/mainPetite_res_lesMenus.scss:./petite/petite_res_lesMenus.css",
+       "prefix":"postcss ./petite/petite_res_lesMenus.css --use autoprefixer -d ./petite/prefixed/" 
   },
   "repository": {
     "type": "git",
