@@ -101,11 +101,12 @@ header {
 }
 
 .restau {
-  /* style de l'ensemble de la section,
-
-  le background color
-  reprendre les padding de la section précédente peut-être
-  */
+  background-color: #f6f6f6;
+  padding: 10%;
+}
+.restau h1 {
+  font-family: Roboto;
+  margin-bottom: 5%;
 }
 .restau-etiquette {
   /*style des coins carrés 
@@ -114,29 +115,59 @@ header {
   les marges bottom
   les marges left et right
   */
+  border-radius: 20px;
+  margin-bottom: 7%;
+  overflow: hidden;
 }
 .restau-etiquette img {
   /* width à 100%
   une hauteur en pixel
   object-fit: cover   
   peut-être des border-radius pour les coins haut gauche et haut droit */
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
 }
 .restau-etiquette__descrip {
-  /*display: grid;
-      grid-template-columns: 1fr 1fr;   */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: white;
 }
 .restau-etiquette__descrip--nom {
-  /* en gras */
+  font-weight: bold;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .restau-etiquette__descrip i {
-  /* couleur */
+  text-align: right;
+  padding-right: 15%;
+  padding-top: 12%;
 }
 .restau-etiquette__descrip i:activ {
   /* la couleur de fond se remplit 
   peut être usage des pseudo-elements ::after */
 }
 .restau-etiquette__descrip--quartier {
+  padding-left: 10%;
+  padding-bottom: 5%;
   /* peut être sa position dans le grid */
+}
+
+footer {
+  padding: 10%;
+  color: white;
+  background-color: #353535;
+}
+footer h1 {
+  font-size: 1em;
+  margin-bottom: 5%;
+}
+footer p {
+  margin-bottom: 5%;
+}
+footer i {
+  margin-right: 2%;
 }
 
 /*# sourceMappingURL=petite_resolution.css.map */
