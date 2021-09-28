@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+body{
+    background-color: #353535;
+}
 
 * {
     font-family: Roboto, Courier, monospace, Arial;
@@ -28,13 +31,21 @@ header{
     align-items: center;
     padding-top: 5%;
     padding-left: 5%;
+    background-color: #ffffff;
 
     h1{
         margin-left: 10%;
+        color: #101010;
+    }
+
+    i{
+        color: #5a5a5a;
     }
 }
 
 .menu{
+
+    
 
     &-transparent{
         display: none;
@@ -49,12 +60,20 @@ header{
     &-textes{
         background-color: #f6f6f6;
         padding: 10% 5% 15% 5%; 
+        text-align: center;
+        position: relative;
+        /* top: -25px; */
+        bottom: 40px;
+        z-index: 2;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        
 
         &__Nom{
 
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
             margin-bottom: 10%;
             
@@ -77,6 +96,7 @@ header{
 
             h3{
                 font-family: Roboto;
+                text-align: left;
             }
 
             .trait{
@@ -89,16 +109,65 @@ header{
 
             .vignette{
                 margin-top: 5%;
-                border-radius: 20px;
-                border: 1px solid red;
+                border-radius: 15px;
                 background-color: #ffffff;
-                height: 4em;
+                height: 5em;
                 display: grid;
-                grid-template-columns: 2fr 1fr;
+                grid-template-columns: 4fr 1fr;
+                grid-template-rows: 1fr 2fr 1fr 2fr 1fr;
+
+
+
+                &-titre{
+                    font-weight: bold;
+                    grid-column: 1;
+                    grid-row: 2;
+                    display: flex;
+                    justify-content: flex-start;
+                    font-size: 0.9em;
+                    padding-left: 3%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    /*width: 80%;*/
+                }
+
+                &-prix{
+                    display: flex;
+                    grid-column: 2;
+                    grid-row: 4;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 0.9em;
+                    font-weight: bold;
+                    /*width: 20%; */
+                }
+
+                &-complement{
+                    
+                    grid-row: 4;
+                    grid-column: 1;
+                    display: flex;
+                    justify-content: flex-start;
+                    font-size: 0.8em;
+                    padding-left: 3%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    
+                    /* width: 80%; */   
+                }
             }
         }
         
-     
+        button{    
+            padding: 3%;
+            color: white;
+            background: linear-gradient(180deg, #eb72da, #ad5edb);
+            border-radius: 50px;
+            width: 60%;
+            height: 50px;
+        }
 
             
 
@@ -121,6 +190,9 @@ footer{
     color: white;
 
     background-color:#353535;
+
+    position: relative;
+    bottom: 40px;
 
     h1{
         font-size: 1em;
