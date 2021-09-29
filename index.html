@@ -19,32 +19,45 @@
     <header> 
     
         <h1>ohmyfood</h1> 
+        <!-- Insérer le logo en image -->
     
     </header>
 
+    <!-- Ici la section suffit. Il ne faut pas utiliser d'article  -->
     <section class="lieu">
+
+        <!-- Les éléments qui sont en display none doivent être supprimés -->
 
         <h1 class="lieu__transparent"> Les restaurants dans le quartier de Paris Belleville </h1>
 
+        <!-- Le champ de recherche doit être un formulaire -->
         <article class="lieu__input">
             <i class="fas fa-map-marker-alt"> </i>
             Paris, Belleville
         </article>
 
+        <!-- Pas d'article pour le slogan, il faut un titre -->
+
         <article class="lieu__slogan">
             <p> Réservez le menu qui vous convient</p>
         </article>
+
+        <!-- L'article n'est nécesssaire, il faut simplement mettre un paragraphe -->
 
         <article class="lieu__message">
             <p> Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
         </article>
 
+        <!-- Le bouton doit être cliquable -->
         <button class="lieu__bouton"> Explorer nos restaurants </button>
         
     </section>
 
     <section class="fonction">
         <h1> Fonctionnement </h1>
+
+        <!-- Les articles ne sont pas la balise à utiliser pour regrouper les éléments, il faut regarder du coté des
+        div et span, attention les éléments sont cliquables (liens)-->
 
         <article class="fonction-bulle">
             <p class="fonction-bulle__rond">1</p>
@@ -117,8 +130,15 @@
 
     <footer>
 
+        <!-- Le logo doit être importé en image -->
+
         <h1> ohmyfood</h1>
 
+        <!-- Il faut utiliser la balise pour créer une liste dans laquelle tu mettras des liens -->
+
+        <ul>
+            <li><a href="/"><i class="fas fa-utensils"> </i> Proposer un restaurant</a></li>
+        </ul>
         <p> <i class="fas fa-utensils"> </i> Proposer un restaurant </p>
         <p> <i class="fas fa-hands-helping"> </i> Devenir partenaire </p>
         <p> Mentions légales </p>

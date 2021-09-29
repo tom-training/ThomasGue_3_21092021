@@ -47,8 +47,6 @@ header{
 
 .menu{
 
-    
-
     &-transparent{
         display: none;
     }
@@ -64,7 +62,6 @@ header{
         padding: 10% 5% 15% 5%; 
         text-align: center;
         position: relative;
-        /* top: -25px; */
         bottom: 40px;
         z-index: 2;
         border-top-left-radius: 25px;
@@ -79,14 +76,12 @@ header{
             flex-wrap: wrap;
             margin-bottom: 10%;
             
-
             h2{
                 display: inline-block;
                 width: 90%;
             }
 
             i{
-
                 display: inline-block;
                 width: 5%;
             }
@@ -105,12 +100,11 @@ header{
                 width: 14%;
                 height: 2px;
                 background-color: #99e2d0;
-                border: none;
-                
+                border: none; 
             }
 
             .vignette{
-                position: relative;
+                position: relative;   /* permet de jouer avec le z-index */
                 margin-top: 5%;
                 border-radius: 15px;
                 background-color: #ffffff;
@@ -119,7 +113,22 @@ header{
                 grid-template-columns: 3fr 1fr 1fr;
                 grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
 
-                
+                &:hover{
+                    & .vignette-prix-afterClic{
+                        z-index: 1;
+                        opacity: 0;
+                    }
+
+                    & .vignette-prix-afterClic-ticked{
+                        z-index: 1;
+                        opacity: 0;
+                    }
+
+                    & .vignette-prix{
+                        z-index: 0;
+                        opacity: 1;
+                    }
+                }
 
                 &-titre{
                     font-weight: bold;
@@ -132,8 +141,6 @@ header{
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
-                    
-                    /*width: 80%;*/
                 }
 
                 &-prix{
@@ -144,11 +151,11 @@ header{
                     justify-content: center;
                     font-size: 0.9em;
                     font-weight: bold;
-                    
-                    /*width: 20%; */
+                    opacity: 0;
+                    transition: opacity 2500ms;
 
                     &-afterClic{
-                        z-index: 1;
+                        z-index: -1;
                         display: flex;
                         grid-column: 2;
                         grid-row: 4;
@@ -157,9 +164,10 @@ header{
                         font-size: 0.9em;
                         font-weight: bold;
                         opacity: 1;
+                        transition: opacity 2500ms;
 
                         &-ticked{
-                            z-index: 1;
+                            z-index: -1;
                             display: flex;
                             grid-column: 3;
                             grid-row: 1 / 6;
@@ -171,8 +179,8 @@ header{
                             opacity: 1;
                             border-top-right-radius: 15px;
                             border-bottom-right-radius: 15px;
+                            transition: opacity 2500ms;
                         }
-
                     }
                 }
 
@@ -186,10 +194,7 @@ header{
                     padding-left: 3%;
                     overflow: hidden;
                     white-space: nowrap;
-                    text-overflow: ellipsis;
-                    
-                    
-                    /* width: 80%; */   
+                    text-overflow: ellipsis; 
                 }
 
                 .fa-check-circle{
@@ -206,17 +211,7 @@ header{
             width: 60%;
             height: 50px;
         }
-
-            
-
-
-
-
     }
-
-    
-
-
 }
 
 

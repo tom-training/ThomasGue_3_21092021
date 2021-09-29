@@ -49,7 +49,6 @@ header i {
   padding: 10% 5% 15% 5%;
   text-align: center;
   position: relative;
-  /* top: -25px; */
   bottom: 40px;
   z-index: 2;
   border-top-left-radius: 25px;
@@ -85,6 +84,7 @@ header i {
 }
 .menu-textes__plats .vignette {
   position: relative;
+  /* permet de jouer avec le z-index */
   margin-top: 5%;
   border-radius: 15px;
   background-color: #ffffff;
@@ -92,6 +92,18 @@ header i {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
+}
+.menu-textes__plats .vignette:hover .vignette-prix-afterClic {
+  z-index: 1;
+  opacity: 0;
+}
+.menu-textes__plats .vignette:hover .vignette-prix-afterClic-ticked {
+  z-index: 1;
+  opacity: 0;
+}
+.menu-textes__plats .vignette:hover .vignette-prix {
+  z-index: 0;
+  opacity: 1;
 }
 .menu-textes__plats .vignette-titre {
   font-weight: bold;
@@ -104,7 +116,6 @@ header i {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /*width: 80%;*/
 }
 .menu-textes__plats .vignette-prix {
   display: flex;
@@ -114,10 +125,11 @@ header i {
   justify-content: center;
   font-size: 0.9em;
   font-weight: bold;
-  /*width: 20%; */
+  opacity: 0;
+  transition: opacity 2500ms;
 }
 .menu-textes__plats .vignette-prix-afterClic {
-  z-index: 1;
+  z-index: -1;
   display: flex;
   grid-column: 2;
   grid-row: 4;
@@ -126,9 +138,10 @@ header i {
   font-size: 0.9em;
   font-weight: bold;
   opacity: 1;
+  transition: opacity 2500ms;
 }
 .menu-textes__plats .vignette-prix-afterClic-ticked {
-  z-index: 1;
+  z-index: -1;
   display: flex;
   grid-column: 3;
   grid-row: 1/6;
@@ -140,6 +153,7 @@ header i {
   opacity: 1;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition: opacity 2500ms;
 }
 .menu-textes__plats .vignette-complement {
   grid-row: 4;
@@ -151,7 +165,6 @@ header i {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /* width: 80%; */
 }
 .menu-textes__plats .vignette .fa-check-circle {
   color: #ffffff;
