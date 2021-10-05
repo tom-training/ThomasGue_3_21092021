@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
@@ -93,17 +94,23 @@ header i {
   grid-template-columns: 3fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
 }
-.menu-textes__plats .vignette:hover .vignette-prix-afterClic {
-  z-index: 1;
-  opacity: 0;
-}
-.menu-textes__plats .vignette:hover .vignette-prix-afterClic-ticked {
-  z-index: 1;
-  opacity: 0;
-}
 .menu-textes__plats .vignette:hover .vignette-prix {
+  transform: translateX(-100%);
+  z-index: 2;
+}
+.menu-textes__plats .vignette:hover .vignette-complement {
   z-index: 0;
+}
+.menu-textes__plats .vignette:hover .vignette-complement-after {
   opacity: 1;
+  z-index: 1;
+}
+.menu-textes__plats .vignette:hover .vignette-ticked {
+  opacity: 1;
+}
+.menu-textes__plats .vignette:hover .vignette-ticked-rotating {
+  opacity: 1;
+  transform: rotate(360deg);
 }
 .menu-textes__plats .vignette-titre {
   font-weight: bold;
@@ -116,6 +123,7 @@ header i {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /* demander à Vincent, cela devrait faire apparaître ...*/
 }
 .menu-textes__plats .vignette-prix {
   display: flex;
@@ -125,24 +133,10 @@ header i {
   justify-content: center;
   font-size: 0.9em;
   font-weight: bold;
-  opacity: 0;
-  transition: opacity 2500ms;
+  border-bottom-right-radius: 5px;
+  transition: transform 4500ms;
 }
-.menu-textes__plats .vignette-prix-afterClic {
-  z-index: -1;
-  display: flex;
-  grid-column: 2;
-  grid-row: 4;
-  display: flex;
-  justify-content: center;
-  font-size: 0.9em;
-  font-weight: bold;
-  opacity: 1;
-  transition: opacity 2500ms;
-}
-.menu-textes__plats .vignette-prix-afterClic-ticked {
-  z-index: -1;
-  display: flex;
+.menu-textes__plats .vignette-ticked {
   grid-column: 3;
   grid-row: 1/6;
   display: flex;
@@ -150,10 +144,16 @@ header i {
   align-items: center;
   font-size: 0.9em;
   background-color: #99e2d0;
-  opacity: 1;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: opacity 2500ms;
+  opacity: 0;
+  transition: opacity 4500ms;
+}
+.menu-textes__plats .vignette-ticked-rotating {
+  background-color: #99e2d0;
+  color: white;
+  opacity: 0;
+  transition: opacity 4500ms, transform 500ms 1000ms;
 }
 .menu-textes__plats .vignette-complement {
   grid-row: 4;
@@ -166,8 +166,14 @@ header i {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu-textes__plats .vignette .fa-check-circle {
-  color: #ffffff;
+.menu-textes__plats .vignette-complement-after {
+  content: "";
+  display: block;
+  grid-row: 4;
+  grid-column: 2;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: opacity 4500ms;
 }
 .menu-textes button {
   padding: 3%;

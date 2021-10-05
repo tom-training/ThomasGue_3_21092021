@@ -114,19 +114,27 @@ header{
                 grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
 
                 &:hover{
-                    & .vignette-prix-afterClic{
-                        z-index: 1;
-                        opacity: 0;
+                    .vignette-prix{
+                        transform: translateX(-100%);
+                        z-index: 2;
                     }
 
-                    & .vignette-prix-afterClic-ticked{
-                        z-index: 1;
-                        opacity: 0;
-                    }
-
-                    & .vignette-prix{
+                    .vignette-complement{
                         z-index: 0;
+                    }
+
+                    .vignette-complement-after{
                         opacity: 1;
+                        z-index: 1;
+                    }
+
+                    .vignette-ticked{
+                        opacity: 1;
+                    }
+
+                    .vignette-ticked-rotating{
+                        opacity: 1;
+                        transform: rotate(360deg);
                     }
                 }
 
@@ -140,7 +148,7 @@ header{
                     padding-left: 3%;
                     overflow: hidden;
                     white-space: nowrap;
-                    text-overflow: ellipsis;
+                    text-overflow: ellipsis;      /* demander à Vincent, cela devrait faire apparaître ...*/
                 }
 
                 &-prix{
@@ -151,39 +159,33 @@ header{
                     justify-content: center;
                     font-size: 0.9em;
                     font-weight: bold;
+                    border-bottom-right-radius: 5px;                
+                    transition: transform 4500ms;
+                }    
+              
+
+                &-ticked{
+                    grid-column: 3;
+                    grid-row: 1 / 6;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0.9em;
+                    background-color: #99e2d0;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    
                     opacity: 0;
-                    transition: opacity 2500ms;
-
-                    &-afterClic{
-                        z-index: -1;
-                        display: flex;
-                        grid-column: 2;
-                        grid-row: 4;
-                        display: flex;
-                        justify-content: center;
-                        font-size: 0.9em;
-                        font-weight: bold;
-                        opacity: 1;
-                        transition: opacity 2500ms;
-
-                        &-ticked{
-                            z-index: -1;
-                            display: flex;
-                            grid-column: 3;
-                            grid-row: 1 / 6;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            font-size: 0.9em;
-                            background-color: #99e2d0;
-                            opacity: 1;
-                            border-top-right-radius: 15px;
-                            border-bottom-right-radius: 15px;
-                            transition: opacity 2500ms;
-                        }
-                    }
+                    transition: opacity 4500ms;
                 }
 
+                &-ticked-rotating{
+                    background-color: #99e2d0;
+                    color: white;
+                    opacity: 0;
+                    transition: opacity 4500ms, transform 500ms 1000ms;
+                }
+                    
                 &-complement{
                     
                     grid-row: 4;
@@ -195,10 +197,16 @@ header{
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis; 
-                }
 
-                .fa-check-circle{
-                    color: #ffffff;
+                    &-after{
+                        content: '';
+                        display: block;
+                        grid-row: 4;
+                        grid-column: 2;
+                        background-color: #ffffff;
+                        opacity: 0;
+                        transition: opacity 4500ms;
+                    }
                 }
             }
         }
