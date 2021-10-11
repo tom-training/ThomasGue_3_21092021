@@ -3,234 +3,262 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-* {
-    font-family: Roboto, Courier, monospace, Arial;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  button 
-{
-	background: none;
-	border: none;
-	font: inherit;	
-}
-
-h1, h2, h3, h4
-{
-    font-family: Shrikhand, Courier, monospace, Arial;
-}
-
-header{
-    text-align: center;
-}
-
-.lieu{
-
-    text-align: center;
-    background-color: #f6f6f6;
-
-    &__transparent{
-        display: none;
-    }
-
-    &__input{
-        background-color: #eaeaea;
-        border-top: 2px solid #d5d5d5;
-        padding-top: 2%;
-        padding-bottom: 2%;
-
-        & i{
-            margin-right: 3%;
-        }
-    }
-
-    &__slogan{
-
-        padding: 10% 15% 1% 15%;
-        font-size: 2rem;
-        font-weight: bold;
-
-
-    }
-
-    &__message{
-
-        padding: 1% 15% 1% 15%;
-    }
-
-    &__bouton{
-
-        margin: 5% 15% 15% 15%;
-        padding: 3%;
-        color: white;
-        background: linear-gradient(135deg, #eb72da, #ad5edb);
-        border-radius: 50px;
-    }
-}
-
-.fonction{
-
-    padding: 10%;
-    
-
-    h1{
-        font-family: Roboto;
-        margin-bottom: 7%;
-    }
-
-    &-bulle{
-
+@media (max-width: 575.98px) {
+    body{
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-
-        border-radius: 20px;
-        background-color: #f6f6f6;
-        margin-bottom: 5%;
-        height: 60px;
+        justify-content: center;
+        font-family: Roboto, Courier, monospace, Arial;
+        box-sizing: border-box;
+    }
+    
+    #mainContainer{
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+      button, input
+    {
+        background: none;
+        border: none;
+        font: inherit;	
+    }
+    
+    /*
+    h1, h2, h3, h4
+    {
+        font-family: Shrikhand, Courier, monospace, Arial;
+    }
+    */
         
+    
+    header{
+        text-align: center;
+        width: 100%;
 
-        &__rond{
-            background-color: #9356dc;
-            height: 22px;
-            width: 22px;
-            border-radius: 50px;
-            margin-right: 2%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            right: 3%;
+        #logo{
+            width: 50%;
         }
 
-        &__label{
+    }
 
+    main{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .lieu{
+    
+        text-align: center;
+        background-color: #f6f6f6;
+        width: 100%;
+        margin-bottom: 10%;
+    
+        &__formulaire{
+            background-color: #eaeaea;
+            border-top: 2px solid #d5d5d5;
+            padding-top: 2%;
+            padding-bottom: 2%;
+    
+            & i{
+                margin-right: 3%;
+            }
+        }
+    
+        &__slogan{
+    
+            padding: 10% 15% 1% 15%;
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: Roboto;
+    
+    
+        }
+    
+        &__message{
+    
+            padding: 1% 15% 1% 15%;
+        }
+    
+        &__bouton{
+    
+            margin: 5% 15% 15% 15%;
+            padding: 3%;
+            color: white;
+            background: linear-gradient(135deg, #eb72da, #ad5edb);
+            border-radius: 50px;
+        }
+    }
+    
+    .fonction{
+    
+        background-color: #ffffff;
+        width: 100%;
+        margin-bottom: 10%;
+        
+    
+        h1{
+            font-family: Roboto;
+            margin-bottom: 7%;
+        }
+    
+        &-bulle{
+    
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            width: 85%;
-        }
-
-        i{
-
-            margin-right: 3%;
-            color: #7e7e7e;
+    
+    
+            border-radius: 20px;
+            background-color: #f6f6f6;
+            margin-bottom: 5%;
+            height: 60px;
             
-        }
-
-        &:hover{
-
-            background-color: #f5edff;
-
-            i{
-                color: #9356dc;
+    
+            &__rond{
+                background-color: #9356dc;
+                height: 22px;
+                width: 22px;
+                border-radius: 50px;
+                margin-right: 2%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                position: relative;
+                right: 3%;
             }
-        }
-
-
-    }
-
-
-}
-
-
-.restau{
     
-    background-color: #f6f6f6;
-
-    padding: 10%;
+            &__label{
     
-    h1{
-        font-family: Roboto;
-        margin-bottom: 5%;
-    }
-
-    &-etiquette{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 85%;
+            }
     
-        /*style des coins carrés 
-        la largeur en %age du bloc conteneur
-        display flex peut-être
-        les marges bottom
-        les marges left et right
-        */
-
-        border-radius: 20px;
-        margin-bottom: 7%;
-        overflow: hidden;
-        
-        
-
-
-        img{
-            /* width à 100%
-            une hauteur en pixel
-            object-fit: cover   
-            peut-être des border-radius pour les coins haut gauche et haut droit */
-            height: 170px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        &__descrip{
-
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            background-color: white;
-
-            &--nom{
-
-                font-weight: bold;
-                padding-left: 10%;
-                padding-top: 5%;
-                padding-bottom: 5%;
-            }    
-
             i{
-                text-align: right;
-
-                padding-right: 15%;
-                padding-top: 12%;
+    
+                margin-right: 3%;
+                color: #7e7e7e;
                 
-
-                &:activ{
-                    /* la couleur de fond se remplit 
-                    peut être usage des pseudo-elements ::after */
+            }
+    
+            &:hover{
+    
+                background-color: #f5edff;
+    
+                i{
+                    color: #9356dc;
                 }
             }
-
-            &--quartier{
-
-                padding-left: 10%;
-                padding-bottom: 5%;
-                /* peut être sa position dans le grid */
+    
+    
+        }
+    
+    
+    }
+    
+    
+    .restau{
+        
+        background-color: #f6f6f6;
+        margin-bottom: 10%;
+        width: 100%;
+        
+        h1{
+            font-family: Roboto;
+            margin-bottom: 5%;
+        }
+    
+        &-etiquette{
+        
+            /*style des coins carrés 
+            la largeur en %age du bloc conteneur
+            display flex peut-être
+            les marges bottom
+            les marges left et right
+            */
+    
+            border-radius: 20px;
+            margin-bottom: 7%;
+            overflow: hidden;
+            
+            
+    
+    
+            img{
+                /* width à 100%
+                une hauteur en pixel
+                object-fit: cover   
+                peut-être des border-radius pour les coins haut gauche et haut droit */
+                height: 170px;
+                width: 100%;
+                object-fit: cover;
+            }
+    
+            &__descrip{
+    
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                background-color: white;
+    
+                &--nom{
+    
+                    font-weight: bold;
+                    padding-left: 10%;
+                    padding-top: 5%;
+                    padding-bottom: 5%;
+                }    
+    
+                i{
+                    text-align: right;
+    
+                    padding-right: 15%;
+                    padding-top: 12%;
+                    
+    
+                    &:activ{
+                        /* la couleur de fond se remplit 
+                        peut être usage des pseudo-elements ::after */
+                    }
+                }
+    
+                &--quartier{
+    
+                    padding-left: 10%;
+                    padding-bottom: 5%;
+                    /* peut être sa position dans le grid */
+                }
             }
         }
+    
     }
-
+    
+    footer{
+    
+        padding: 10%;
+        color: white;
+        background-color:#353535;
+        width: 100%;
+    
+        h1{
+            font-size: 1em;
+            margin-bottom: 5%;
+            font-family: Shrikhand, Courier, monospace, Arial;
+        }
+    
+        p{
+            margin-bottom: 5%;
+        }
+    
+        i{
+            margin-right: 2%;
+        }
+    }
 }
 
-footer{
-
-    padding: 10%;
-
-    color: white;
-
-    background-color:#353535;
-
-    h1{
-        font-size: 1em;
-        margin-bottom: 5%;
-    }
-
-    p{
-        margin-bottom: 5%;
-    }
-
-    i{
-        margin-right: 2%;
-    }
-}
