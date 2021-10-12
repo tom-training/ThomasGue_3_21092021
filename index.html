@@ -36,28 +36,31 @@
                 <!-- Les éléments qui sont en display none doivent être supprimés -->
         
                 <!-- Le champ de recherche doit être un formulaire -->
-                <form class="lieu__formulaire">
+                <article class="lieu-lequel">
         
-                    <input type="submit" value="" id="marquage"/>
-                    <label for="marquage"> <i class="fas fa-map-marker-alt"></i></label>
-                    
-                    <input type="search" placeholder="Paris, Belleville" class="ville"/>
-                </form>
+                    <p class="lieu-lequel__ville">
+                        <i class="fas fa-map-marker-alt"> </i>
+                        Paris, Belleville
+                    </p>
+
+                </article>
         
                 <!-- Pas d'article pour le slogan, il faut un titre -->
         
             
-                <h1 class="lieur__slogan"> Réservez le menu qui vous convient</h1>
+                <h1 class="lieu-slogan"> Réservez le menu qui vous convient</h1>
             
         
                 <!-- L'article n'est nécesssaire, il faut simplement mettre un paragraphe -->
         
-                <article class="lieu__message">
+                <article class="lieu-message">
                     <p> Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
                 </article>
         
                 <!-- Le bouton doit être cliquable -->
-                <button class="lieu__bouton"> Explorer nos restaurants </button>
+                <a href="#restaurants">
+                    <button class="lieu-bouton"> Explorer nos restaurants </button> 
+                </a> 
                 
             </section>
         
@@ -66,73 +69,115 @@
         
                 <!-- Les articles ne sont pas la balise à utiliser pour regrouper les éléments, il faut regarder du coté des
                 div et span, attention les éléments sont cliquables (liens)-->
-        
-                <article class="fonction-bulle">
-                    <p class="fonction-bulle__rond">1</p>
-                    <p class="fonction-bulle__label"> <i class="fas fa-mobile"></i> Choisissez un restaurant </p>
-                </article>
-        
-                <article class="fonction-bulle">
-                    <p class="fonction-bulle__rond">2</p>
-                    <p class="fonction-bulle__label"> <i class="fas fa-list-ul"> </i> Composez votre menu </p>
-                </article>
-        
-                <article class="fonction-bulle">
-                    <p class="fonction-bulle__rond">3</p>
-                    <p class="fonction-bulle__label"> <i class="fas fa-store"> </i> Dégustez au restaurant </p>
-                </article>
-        
+                
+                <div class="fonction-lesBulles">
+                    <a href="" class="fonction-lesBulles__bulle">
+                        <p class="fonction-lesBulles__bulle--rond">1</p>
+                        <p class="fonction-lesBulles__bulle--label"> <i class="fas fa-mobile-alt" aria-hidden="true"></i> Choisissez un restaurant </p>
+                    </a>
+            
+                    <a href="" class="fonction-lesBulles__bulle">
+                        <p class="fonction-lesBulles__bulle--rond">2</p>
+                        <p class="fonction-lesBulles__bulle--label"> <i class="fas fa-list-ul"> </i> Composez votre menu </p>
+                    </a>
+            
+                    <a href="" class="fonction-lesBulles__bulle">
+                        <p class="fonction-lesBulles__bulle--rond">3</p>
+                        <p class="fonction-lesBulles__bulle--label"> <i class="fas fa-store"> </i> Dégustez au restaurant </p>
+                    </a>
+                </div>    
+
             </section>
         
         
             <section class="restau">
-                <h1> Restaurants </h1>
-        
-                <a href="laPalette.html">
-                    <article class="restau-etiquette">
-        
+                <h1 id="restaurants"> Restaurants </h1>
+
+                <article class="restau-lesEtiq">
+
+                    <div class="restau-lesEtiq__etiquette">
+                    
                         <img src="images/restaurants/restau1.jpg" alt="La palette du goût"/>
         
-                        <div class="restau-etiquette__descrip">
-                            <p class= "restau-etiquette__descrip--nom"> La palette du goût</p>
-                            <i class="far fa-heart"></i>
-                            <p class="restau-etiquette__descrip--quartier"> Ménilmontant </p>
+                        <div class="restau-lesEtiq__etiquette--descrip">
+
+                            <p class= "restau-lesEtiq__etiquette--descrip--nom"> 
+                                <a href="laPalette.html"> La palette du goût </a> 
+                            </p>
+                            
+                            <a class="restau-lesEtiq__etiquette--descrip--coeur">
+                                <i class="far fa-heart coeurVide"></i>
+                                <i class="fas fa-heart coeurPlein"></i>
+                            </a>
+                            
+                            
+                            <p class="restau-lesEtiq__etiquette--descrip--quartier"> Ménilmontant </p>
                         </div>
+                            
+                    </div>
+            
+                    <div class="restau-lesEtiq__etiquette">
+            
+                        <img src="images/restaurants/restau2.jpg" alt="La note enchantée"/>
+            
+                        <div class="restau-lesEtiq__etiquette--descrip">
+
+                            <p class= "restau-lesEtiq__etiquette--descrip--nom"> 
+                                <a href="laNote.html"> La note enchantée </a> 
+                            </p>
+                            
+                            <a class="restau-lesEtiq__etiquette--descrip--coeur">
+                                <i class="far fa-heart coeurVide"></i>
+                                <i class="fas fa-heart coeurPlein"></i>
+                            </a>
+                            
+                            <p class="restau-lesEtiq__etiquette--descrip--quartier"> Charonne </p>
+            
+                        </div>
+                    </div>
+            
+                    <div class="restau-lesEtiq__etiquette">
                         
-                    </article>
-                </a>
-        
-                <article class="restau-etiquette">
-        
-                    <img src="images/restaurants/restau2.jpg" alt="La note enchantée"/>
-        
-                    <div class="restau-etiquette__descrip">
-                        <p class= "restau-etiquette__descrip--nom"> La note enchantée</p>
-                        <i class="far fa-heart"></i>
-                        <p class="restau-etiquette__descrip--quartier"> Charonne </p>
-        
+                        <img src="images/restaurants/restau3.jpg" alt="A la française"/>
+
+                        <div class="restau-lesEtiq__etiquette--descrip">
+                            
+                            <p class= "restau-lesEtiq__etiquette--descrip--nom"> 
+                                <a href="laFrancaise.html"> A la française </a> 
+                            </p>
+                            
+                            <a class="restau-lesEtiq__etiquette--descrip--coeur">
+                                <i class="far fa-heart coeurVide"></i>
+                                <i class="fas fa-heart coeurPlein"></i>
+                            </a>
+                            
+                            <p class="restau-lesEtiq__etiquette--descrip--quartier"> Cité Rouge </p>
+            
+                        </div>
+                    </div>
+            
+                    <div class="restau-lesEtiq__etiquette">
+    
+                        <img src="images/restaurants/restau4.jpg" alt="Le délice des sens"/>
+
+                        <div class="restau-lesEtiq__etiquette--descrip">
+
+                            <p class= "restau-lesEtiq__etiquette--descrip--nom"> 
+                                <a href="leDelice.html"> Le délice des sens </a> 
+                            </p>
+                            
+                            <a class="restau-lesEtiq__etiquette--descrip--coeur">
+                                <i class="far fa-heart coeurVide"></i>
+                                <i class="fas fa-heart coeurPlein"></i>
+                            </a>
+                            
+                            <p class="restau-lesEtiq__etiquette--descrip--quartier"> Folie-Méricourt </p>
+            
+                        </div>
                     </div>
                 </article>
         
-                <article class="restau-etiquette">
-                    <img src="images/restaurants/restau3.jpg" alt="A la française"/>
-                    <div class="restau-etiquette__descrip">
-                        <p class= "restau-etiquette__descrip--nom"> A la française </p>
-                        <i class="far fa-heart"></i>
-                        <p class="restau-etiquette__descrip--quartier"> Cité Rouge </p>
-        
-                    </div>
-                </article>
-        
-                <article class="restau-etiquette">
-                    <img src="images/restaurants/restau4.jpg" alt="Le délice des sens"/>
-                    <div class="restau-etiquette__descrip">
-                        <p class= "restau-etiquette__descrip--nom"> Le délice des sens </p>
-                        <i class="far fa-heart"></i>
-                        <p class="restau-etiquette__descrip--quartier"> Folie-Méricourt </p>
-        
-                    </div>
-                </article>
+                
         
             </section>
         </main>
@@ -141,12 +186,10 @@
     
             <h1> ohmyfood</h1>
     
-            <!-- Il faut creer des liens -->
-    
-            <p> <i class="fas fa-utensils"> </i> Proposer un restaurant </p>
-            <p> <i class="fas fa-hands-helping"> </i> Devenir partenaire </p>
-            <p> Mentions légales </p>
-            <p> Contact </p>
+            <p> <a href=""> <i class="fas fa-utensils"> </i> Proposer un restaurant </a> </p>
+            <p> <a href=""> <i class="fas fa-hands-helping"> </i> Devenir partenaire </a>  </p>
+            <p> <a href=""> Mentions légales </a> </p>
+            <p> <a href=""> Contact </a> </p>
         
         
         </footer>
