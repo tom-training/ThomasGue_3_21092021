@@ -15,7 +15,6 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 2px solid red;
   }
 
   button, input {
@@ -142,7 +141,6 @@
 
   .restau {
     background-color: #f6f6f6;
-    margin-bottom: 10%;
     padding-top: 10%;
     padding-bottom: 10%;
     width: 100%;
@@ -246,6 +244,534 @@
   }
   footer p {
     margin-bottom: 5%;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  footer p a:hover {
+    color: #c27bb4;
+  }
+  footer i {
+    margin-right: 2%;
+  }
+}
+/*Medium devices (tablets, less than 992px)*/
+/*@media (max-width: 991.98px) {   */
+@media (min-width: 575.99px) and (max-width: 991.98px) {
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Courier, monospace, Arial;
+    box-sizing: border-box;
+  }
+
+  #mainContainer {
+    max-width: 950px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  button, input {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+
+  /*
+  h1, h2, h3, h4
+  {
+      font-family: Shrikhand, Courier, monospace, Arial;
+  }
+  */
+  header {
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  header #logo {
+    width: 50%;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .lieu {
+    text-align: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .lieu-lequel {
+    background-color: #eaeaea;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    justify-content: center;
+  }
+  .lieu-lequel__ville {
+    /* display: flex;
+    align-items: center; */
+    height: 100%;
+  }
+  .lieu-lequel__ville i {
+    margin-right: 1em;
+    height: 100%;
+  }
+  .lieu-slogan {
+    padding: 1% 5% 1% 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Roboto;
+  }
+  .lieu-message {
+    padding: 1% 5% 1% 5%;
+  }
+  .lieu-bouton {
+    margin: 5% 15% 15% 15%;
+    padding: 3%;
+    color: white;
+    background: linear-gradient(135deg, #eb72da, #ad5edb);
+    border-radius: 50px;
+  }
+
+  .fonction {
+    background-color: #ffffff;
+    width: 100%;
+    margin-bottom: 10%;
+    width: 90%;
+    align-self: center;
+  }
+  .fonction h1 {
+    font-family: Roboto;
+    margin-bottom: 7%;
+    text-align: center;
+  }
+  .fonction-lesBulles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .fonction-lesBulles__bulle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 7%;
+    width: 35%;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    margin-bottom: 5%;
+    height: 60px;
+    box-shadow: 3px 4px 2px #e6e6e6;
+    text-decoration: none;
+  }
+  .fonction-lesBulles__bulle--rond {
+    background-color: #9356dc;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    right: 3%;
+  }
+  .fonction-lesBulles__bulle--label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+  }
+  .fonction-lesBulles__bulle i {
+    margin-right: 3%;
+    color: #7e7e7e;
+  }
+  .fonction-lesBulles__bulle:hover {
+    background-color: #f5edff;
+  }
+  .fonction-lesBulles__bulle:hover i {
+    color: #9356dc;
+  }
+
+  .restau {
+    background-color: #f6f6f6;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restau h1 {
+    font-family: Roboto;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  .restau-lesEtiq {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restau-lesEtiq__etiquette {
+    border-radius: 20px;
+    margin-bottom: 10%;
+    overflow: hidden;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 40%;
+  }
+  .restau-lesEtiq__etiquette img {
+    /* width à 100%
+    une hauteur en pixel
+    object-fit: cover   
+    peut-être des border-radius pour les coins haut gauche et haut droit */
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .restau-lesEtiq__etiquette--descrip {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 40%;
+    background-color: white;
+    color: black;
+  }
+  .restau-lesEtiq__etiquette--descrip--nom {
+    grid-row: 1;
+    grid-column: 1;
+    font-weight: bold;
+    padding-left: 5%;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1em;
+  }
+  .restau-lesEtiq__etiquette--descrip--nom a {
+    text-decoration: none;
+    color: black;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1em;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur .coeurVide {
+    color: black;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 3500ms;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur .coeurPlein {
+    color: plum;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 3500ms;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur:active .coeurPlein {
+    z-index: 1;
+    opacity: 1;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur:active .coeurVide {
+    z-index: -1;
+    opacity: 0;
+  }
+  .restau-lesEtiq__etiquette--descrip--quartier {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 5%;
+    font-size: 1em;
+  }
+
+  footer {
+    padding: 10%;
+    color: white;
+    background-color: #353535;
+    overflow: hidden;
+    border: 2px dotted yellow;
+  }
+  footer h1 {
+    font-size: 2em;
+    margin-bottom: 5%;
+    font-family: Shrikhand, Courier, monospace, Arial;
+  }
+  footer p {
+    margin-bottom: 5%;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  footer p a:hover {
+    color: #c27bb4;
+  }
+  footer i {
+    margin-right: 2%;
+  }
+}
+@media (min-width: 991.99px) and (max-width: 1880px) {
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: Roboto, Courier, monospace, Arial;
+    box-sizing: border-box;
+  }
+
+  #mainContainer {
+    max-width: 1800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  button, input {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+
+  /*
+  h1, h2, h3, h4
+  {
+      font-family: Shrikhand, Courier, monospace, Arial;
+  }
+  */
+  header {
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  header #logo {
+    width: 50%;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .lieu {
+    text-align: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .lieu-lequel {
+    background-color: #eaeaea;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    display: flex;
+    justify-content: center;
+  }
+  .lieu-lequel__ville {
+    /* display: flex;
+    align-items: center; */
+    height: 100%;
+  }
+  .lieu-lequel__ville i {
+    margin-right: 1em;
+    height: 100%;
+  }
+  .lieu-slogan {
+    padding: 1% 5% 1% 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Roboto;
+  }
+  .lieu-message {
+    padding: 1% 5% 1% 5%;
+  }
+  .lieu-bouton {
+    margin: 5% 15% 15% 15%;
+    padding: 3%;
+    color: white;
+    background: linear-gradient(135deg, #eb72da, #ad5edb);
+    border-radius: 50px;
+  }
+
+  .fonction {
+    background-color: #ffffff;
+    width: 100%;
+    margin-bottom: 10%;
+    width: 90%;
+    align-self: center;
+  }
+  .fonction h1 {
+    font-family: Roboto;
+    margin-bottom: 7%;
+  }
+  .fonction-lesBulles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .fonction-lesBulles__bulle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 7%;
+    width: 35%;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    margin-bottom: 5%;
+    height: 60px;
+    box-shadow: 3px 4px 2px #e6e6e6;
+    text-decoration: none;
+  }
+  .fonction-lesBulles__bulle--rond {
+    background-color: #9356dc;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    right: 3%;
+  }
+  .fonction-lesBulles__bulle--label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+  }
+  .fonction-lesBulles__bulle i {
+    margin-right: 3%;
+    color: #7e7e7e;
+  }
+  .fonction-lesBulles__bulle:hover {
+    background-color: #f5edff;
+  }
+  .fonction-lesBulles__bulle:hover i {
+    color: #9356dc;
+  }
+
+  .restau {
+    background-color: #f6f6f6;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restau h1 {
+    align-self: flex-start;
+    font-family: Roboto;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  .restau-lesEtiq {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .restau-lesEtiq__etiquette {
+    border-radius: 20px;
+    margin-bottom: 10%;
+    overflow: hidden;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 40%;
+  }
+  .restau-lesEtiq__etiquette img {
+    /* width à 100%
+    une hauteur en pixel
+    object-fit: cover   
+    peut-être des border-radius pour les coins haut gauche et haut droit */
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .restau-lesEtiq__etiquette--descrip {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 40%;
+    background-color: white;
+    color: black;
+  }
+  .restau-lesEtiq__etiquette--descrip--nom {
+    grid-row: 1;
+    grid-column: 1;
+    font-weight: bold;
+    padding-left: 5%;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1em;
+  }
+  .restau-lesEtiq__etiquette--descrip--nom a {
+    text-decoration: none;
+    color: black;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1em;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur .coeurVide {
+    color: black;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 3500ms;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur .coeurPlein {
+    color: plum;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 3500ms;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur:active .coeurPlein {
+    z-index: 1;
+    opacity: 1;
+  }
+  .restau-lesEtiq__etiquette--descrip--coeur:active .coeurVide {
+    z-index: -1;
+    opacity: 0;
+  }
+  .restau-lesEtiq__etiquette--descrip--quartier {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 5%;
+    font-size: 1em;
+  }
+
+  footer {
+    padding: 2%;
+    color: white;
+    background-color: #353535;
+    overflow: hidden;
+    border: 2px dotted yellow;
+  }
+  footer h1 {
+    font-size: 1.5em;
+    margin-bottom: 5%;
+    font-family: Shrikhand, Courier, monospace, Arial;
   }
   footer p a {
     text-decoration: none;
