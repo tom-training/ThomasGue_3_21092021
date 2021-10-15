@@ -6,194 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 320px) and (max-width: 2000px)" href="CSS/lesMenus.css"/>
-    <!--<script src="https://kit.fontawesome.com/e7879f2a3a.js" crossorigin="anonymous"></script> -->
-    <!--
-    <script>
-        FontAwesomeConfig = { autoReplaceSvg: 'nest' }
-    </script>
-    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
-    -->
 
     <script src="https://kit.fontawesome.com/e7879f2a3a.js" crossorigin="anonymous"></script> 
 
-    <title>Oh my food, la palette du goût </title>
+    <title> Oh my food, la palette du goût </title>
 </head>
-<body>
 
-    <header>
+<body> 
 
-        <a href="index.html"> <i class="fas fa-arrow-left"> </i> </a> 
+    <div id="mainContainer">
 
-        <h1> ohmyfood</h1> 
+        <header>
+
+            <a href="index.html"> <i class="fas fa-arrow-left"> </i> </a> 
+    
+            <h1> ohmyfood</h1> 
+            
+        </header>
+
+        <main>
+    
+    
+            <img src="./images/restaurants/restau1.jpg" class="menu-photo" alt="photo de la Palette du Goût"/>
+    
+            <div class="menu">
         
-    </header>
+                <h2> La palette du goût <i class="far fa-heart"></i></h2> 
 
-    <section class="menu">
+                <section class="carte">   
 
-        <h1 class="menu-transparent"> Le restaurant La Palette du Goût </h1>
-
-        <img src="./images/restaurants/restau1.jpg" class="menu-photo" alt="photo de la Palette du Goût"/>
-
-        <div class="menu-textes">
-
-            <article class="menu-textes__Nom"> 
-                
-                <h2> La palette du goût </h2>   
-                <i class="far fa-heart"></i>
-
-            </article>  
-            
-            
-
-            <article class="menu-textes__plats">
-
-                <h3> ENTRÉES </h3>
-
-                <hr class="trait"/>
-
-                <div class="vignette">
-                    <p class="vignette-titre"> Fricassée d'escargot</p>
-                    <p class="vignette-prix">  25€ </p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i> 
-                    </p>
-                    <p class="vignette-complement"> Au piment d'Espelette </p>
-                    <p class="vignette-complement-after"> </p>
-                </div>
-
-                <div class="vignette">
-                    <p class="vignette-titre"> Foie gras de canard mi-cuit</p>
-                    <p class="vignette-prix">35€ </p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    <p class="vignette-complement">Et ses copeaux de truffe noire</p>
-                    <p class="vignette-complement-after"> </p>
-                </div>
-
-                <div class="vignette">
-                    <p class="vignette-titre"> Oeuf au plat</p>
-                    <p class="vignette-prix"> 20€</p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    <p class="vignette-complement"> Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="vignette-complement-after"> </p>
-                </div>
-
-            </article>
-
-            <article class="menu-textes__plats">
-
-                <h3> PLATS </h3>
-
-                <hr class="trait"/>
-
-                <div class="vignette">
-                    <p class="vignette-titre">Filet de boeuf aux herbes </p>
-                    <p class="vignette-prix"> 40€</p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    <p class="vignette-complement"> Accompagné de sa ribambelle de légumes</p>
-                    <p class="vignette-complement-after"> </p>
-                </div>
-
-                <div class="vignette">
-                    <p class="vignette-titre"> Parmentier de queue de boeuf</p>
-                    <p class="vignette-prix">35€ </p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    <p class="vignette-complement"> À la truffe noire sur sa purée de panais </p>
-                    <p class="vignette-complement-after"> </p>
-                </div>
-
-                <div class="vignette">
-                    <p class="vignette-titre"> Filet de turbot </p>
-                    <p class="vignette-prix"> 44€ </p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    <p class="vignette-complement"> Aux agrumes </p>
-                    <p class="vignette-complement-after"> </p>
-                </div>
-
-            </article>
-
-            <article class="menu-textes__plats">
-
-                <h3> DESSERTS </h3>
-
-                <hr class="trait"/>
-
-                <div class="vignette">
-                    
-                        <p class="vignette-titre">Paris-Brest</p>
-                        <p class="vignette-prix"> 18€ </p>
-                        <p class="vignette-ticked">
-                            <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
+                    <h3> ENTRÉES </h3>
+    
+                    <hr class="trait"/>
+    
+                    <article class="carte-bulle">   
+                        <p class="carte-bulle__titre"> Fricassée d'escargot</p>
+                        <p class="carte-bulle__prix">  25€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
                         </p>
-                        <p class="vignette-complement"> Revisité</p>
-                        <p class="vignette-complement-after"> </p>
-                        
-                                        
+                        <p class="carte-bulle__complement"> Au piment d'Espelette </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Foie gras de canard mi-cuit</p>
+                        <p class="carte-bulle__prix">  35€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Et ses copeaux de truffe noire </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Oeuf au plat</p>
+                        <p class="carte-bulle__prix">  20€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Assaisonnée à la truffe sur lit de caviar </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                </section>
+    
+                <section class="carte">
+
+                    <h3> PLATS </h3>
+    
+                    <hr class="trait"/>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Filet de boeuf aux herbes </p>
+                        <p class="carte-bulle__prix">  40€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Accompagné de sa ribambelle de légumes </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Parmentier de queue de boeuf </p>
+                        <p class="carte-bulle__prix">  35€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> A la truffe noire sur sa purée de panais </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Filet de Turbot </p>
+                        <p class="carte-bulle__prix">  44€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Aux agrumes </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                </section>
+    
+                <section class="carte">
+
+                    <h3> DESSERTS </h3>
+    
+                    <hr class="trait"/>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Paris-Brest </p>
+                        <p class="carte-bulle__prix">  18€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Revisité </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Macaron au chocolat d'exception </p>
+                        <p class="carte-bulle__prix">  22€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Et glace à la vanille de Madagascar </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                    <article class="carte-bulle">
+                        <p class="carte-bulle__titre"> Mousse au chocolat </p>
+                        <p class="carte-bulle__prix">  23€ </p>
+                        <p class="carte-bulle__ticked">
+                            <i class="fas fa-check-circle ticked-rotating"> </i> 
+                        </p>
+                        <p class="carte-bulle__complement"> Aux piments d'espelette et à la truffe noire </p>
+                        <p class="carte-bulle__complement-after"> </p>
+                    </article>
+    
+                </section>
+                
                     
-                </div>
+                <button> Commander </button>
+    
+            </div>
+        
+        </main>
 
-                <div class="vignette">
-                     
-                    <p class="vignette-titre">Macaron au chocolat d'exception </p>
-                    <p class="vignette-prix">22€ </p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    <p class="vignette-complement">Et glace à la vanille de Madagascar </p>
-                    <p class="vignette-complement-after"> </p>
-                    
-                    
-                </div>
-
-                <div class="vignette">
-                    <p class="vignette-titre">Mousse au chocolat </p> 
-                    <p class="vignette-prix">23€  </p>
-                    <p class="vignette-ticked">
-                        <i class="fas fa-check-circle vignette-ticked-rotating"> </i>
-                    </p>
-                    
-                    <p class="vignette-complement">Au piment d'Espelette et à la truffe noire </p>
-                    <p class="vignette-complement-after"> </p> 
-                </div>
-
-            </article>
-
-            <button> Commander </button>
-
-        </div>
-
-    </section>
-
-
-    <footer>
-
-        <h1> ohmyfood</h1>
-
-        <p> <i class="fas fa-utensils"> </i> Proposer un restaurant </p>
-        <p> <i class="fas fa-hands-helping"> </i> Devenir partenaire </p>
-        <p> Mentions légales </p>
-        <p> Contact </p>
-
-
-    </footer>
-
-
-
-
-
-
-   
-
-
+        <footer>
+        
+            <h2> ohmyfood</h2>
+    
+            <p> <i class="fas fa-utensils"> </i> Proposer un restaurant </p>
+            <p> <i class="fas fa-hands-helping"> </i> Devenir partenaire </p>
+            <p> Mentions légales </p>
+            <p> Contact </p>
+    
+        </footer>
+    
+    </div>
     
 </body>
 </html>
