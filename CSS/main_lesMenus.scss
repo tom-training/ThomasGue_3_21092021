@@ -6,7 +6,6 @@
 @media (max-width: 575.98px){
 
     body{
-        
         display: flex;
         justify-content: center;
         font-family: Roboto, Courier, monospace, Arial;
@@ -18,7 +17,7 @@
     *{
         box-sizing: border-box;
         margin: 0;
-        padding: 0
+        padding: 0;
     }
 
     #mainContainer{
@@ -28,7 +27,6 @@
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
-        border: 2px solid red;
     }
     
   
@@ -73,41 +71,31 @@
         background-color: #f6f6f6;
         padding: 10% 5% 15% 5%;
         text-align: center;
+         
         position: relative;
-        bottom: 40px;
+       
+        margin-top: -30px;        
         z-index: 2; 
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        border: 2px dotted navy;
 
         &>h2{
-            /* il faut revoir ce code 
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 10%;
-            display: inline-block;  */
             width: 90%;
-
             font-family: Shrikhand, Courier, monospace, Arial;
             font-size: 1.4em;
-            border: 2px solid orchid;
+            text-align: center;
 
             i{
-                
             display: inline-block;
             margin-left: 4%;
-            width: 5%;
-                
+            width: 5%;  
             }
         }
     }
 
     .carte{
-
+        margin-top: 10%;
         margin-bottom: 10%;
-        border: 2px solid green;
 
         .trait{
             width: 14%;
@@ -133,21 +121,22 @@
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
 
-            border: 2px solid yellowgreen;
-
             &:hover{
+
+                .carte-bulle__titre{
+                    z-index: 0;
+                    width: 60%;
+                }
                 .carte-bulle__prix{
                     transform: translateX(-100%);
-                    z-index: 2;
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                    z-index: 1;        
                 }
 
                 .carte-bulle__complement{
                     z-index: 0;
-                }
-
-                .carte-bulle__complement-after{
-                    opacity: 1;
-                    z-index: 1;
+                    width: 75%;
                 }
 
                 .carte-bulle__ticked{
@@ -161,28 +150,40 @@
             }
 
             .carte-bulle__titre{
-                
-                grid-column: 1 / 2;
+                font-weight: bold;
+                grid-column: 1 / 4;
                 grid-row: 2;
-                display: flex;
-                justify-content: flex-start;
+                text-align: left;
                 font-size: 0.9em;
                 padding-left: 3%;
                 overflow: hidden;
                 white-space: nowrap;   
-                text-overflow: ellipsis;       /* ...demander à Vincent, cela devrait faire apparaître ...*/
+                text-overflow: ellipsis;      
+                width: 100%;
+                transition: width 1400ms;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
             }
 
             &__prix{
-                display: flex;
                 grid-column: 3;
-                grid-row: 4;
-                display: flex;
-                justify-content: center;
+                grid-row: 1 / 6;
+                
                 font-size: 0.9em;
-                font-weight: bold;
-                border-bottom-right-radius: 5px;                
-                transition: transform 4500ms;
+                font-weight: bold;               
+                
+                background-color: #ffffff;
+
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                padding-bottom: 6px;
+                
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                transition: transform 1400ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
+
             }
 
             &__ticked{
@@ -191,13 +192,12 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 0.9em;
+
                 background-color: #99e2d0;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 4500ms;
-                border: 3px solid maroon;
+                transition: opacity 1400ms;
 
                 .ticked-rotating{
                     background-color: #99e2d0;
@@ -210,24 +210,15 @@
             &__complement{
                 grid-row: 4;
                 grid-column: 1 / 3;
-                display: flex;
-                justify-content: flex-start;
+                text-align: left;
                 font-size: 0.8em;
                 padding-left: 3%;
                 overflow: hidden;
                 white-space: nowrap;
-                text-overflow: ellipsis; 
-
-                &-after{
-                    content: '';
-                    display: block;
-                    grid-row: 4;
-                    grid-column: 2;
-                    background-color: #ffffff;
-                    opacity: 0;
-                    transition: opacity 4500ms;
-                }
-
+                text-overflow: ellipsis;  
+                width: 100%;
+                transition: width 1400ms;
+                border-bottom-left-radius: 15px;  
             }
         }
     }
@@ -247,15 +238,13 @@
     
     footer{
     
-        margin: 10%;
-    
+        padding-top: 10%;
+        padding-left: 10%;
+        padding-bottom: 10%;
+        width: 100%;
         color: white;
-    
         background-color:#353535;
-    
-        position: relative;
-        bottom: 40px;
-    
+     
         h2{
             font-size: 1em;
             margin-bottom: 5%;
@@ -270,6 +259,5 @@
             margin-right: 2%;
         }
     }
-
 }
 

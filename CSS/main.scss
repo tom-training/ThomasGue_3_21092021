@@ -5,18 +5,19 @@
 
 @media (max-width: 575.98px) {
     body{
-        display: flex;
-        justify-content: center;
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
     
     #mainContainer{
-        max-width: 500px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
+        width: 100%;
     }
     
       button, input       /* MODIF MODIF MODIF MODIF         effacer input  */
@@ -318,10 +319,6 @@
         color: white;
         background-color:#353535;
         overflow: hidden;
-
-        border: 2px dotted yellow;
-
-       
     
         h1{
             font-size: 1em;
@@ -355,14 +352,11 @@
 @media (min-width: 575.99px) and (max-width: 991.98px){    
 
     body{
-        display: flex;
-        justify-content: center;
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
     }
     
     #mainContainer{
-        max-width: 950px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -527,9 +521,7 @@
                     }
                 }
             }
-
-        }
-        
+        }   
     }
     
     
@@ -674,8 +666,6 @@
         background-color:#353535;
         overflow: hidden;
 
-        border: 2px dotted yellow;
-
         h1{
             font-size: 2em;
             margin-bottom: 5%;
@@ -704,14 +694,11 @@
 @media (min-width: 991.99px) and (max-width: 1880px){
 
     body{
-        display: flex;
-        justify-content: center;
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
     }
     
     #mainContainer{
-        max-width: 1800px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -1010,8 +997,6 @@
                 }
             }
         }
-        
-    
     }
     
     footer{
@@ -1020,9 +1005,6 @@
         color: white;
         background-color:#353535;
         overflow: hidden;
-
-
-        border: 2px dotted yellow;
 
         h1{
             font-size: 1.5em;

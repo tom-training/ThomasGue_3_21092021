@@ -3,18 +3,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @media (max-width: 575.98px) {
   body {
-    display: flex;
-    justify-content: center;
     font-family: Roboto, Courier, monospace, Arial;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   #mainContainer {
-    max-width: 500px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   button, input {
@@ -235,7 +236,6 @@
     color: white;
     background-color: #353535;
     overflow: hidden;
-    border: 2px dotted yellow;
   }
   footer h1 {
     font-size: 1em;
@@ -260,14 +260,11 @@
 /*@media (max-width: 991.98px) {   */
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   body {
-    display: flex;
-    justify-content: center;
     font-family: Roboto, Courier, monospace, Arial;
     box-sizing: border-box;
   }
 
   #mainContainer {
-    max-width: 950px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -501,7 +498,6 @@
     color: white;
     background-color: #353535;
     overflow: hidden;
-    border: 2px dotted yellow;
   }
   footer h1 {
     font-size: 2em;
@@ -524,14 +520,11 @@
 }
 @media (min-width: 991.99px) and (max-width: 1880px) {
   body {
-    display: flex;
-    justify-content: center;
     font-family: Roboto, Courier, monospace, Arial;
     box-sizing: border-box;
   }
 
   #mainContainer {
-    max-width: 1800px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -766,7 +759,6 @@
     color: white;
     background-color: #353535;
     overflow: hidden;
-    border: 2px dotted yellow;
   }
   footer h1 {
     font-size: 1.5em;
@@ -785,4 +777,4 @@
   }
 }
 
-/*# sourceMappingURL=petite_resolution.css.map */
+/*# sourceMappingURL=style.css.map */
