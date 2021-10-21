@@ -24,12 +24,6 @@
     font: inherit;
   }
 
-  /*
-  h1, h2, h3, h4
-  {
-      font-family: Shrikhand, Courier, monospace, Arial;
-  }
-  */
   header {
     text-align: center;
     width: 100%;
@@ -60,8 +54,6 @@
     justify-content: center;
   }
   .lieu-lequel__ville {
-    /* display: flex;
-    align-items: center; */
     height: 100%;
   }
   .lieu-lequel__ville i {
@@ -91,13 +83,17 @@
     margin-bottom: 10%;
     width: 90%;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .fonction h1 {
     font-family: Roboto;
     margin-bottom: 7%;
+    align-self: flex-start;
   }
   .fonction-lesBulles {
-    width: 100%;
+    width: 85%;
   }
   .fonction-lesBulles__bulle {
     display: flex;
@@ -115,7 +111,7 @@
     height: 22px;
     width: 22px;
     border-radius: 50px;
-    margin-right: 2%;
+    margin-right: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +126,7 @@
     width: 85%;
   }
   .fonction-lesBulles__bulle i {
-    margin-right: 3%;
+    margin-right: 10%;
     color: #7e7e7e;
   }
   .fonction-lesBulles__bulle:hover {
@@ -166,6 +162,9 @@
     margin-bottom: 10%;
     overflow: hidden;
   }
+  .restau-lesEtiq__etiquette .blocImage {
+    position: relative;
+  }
   .restau-lesEtiq__etiquette img {
     /* width à 100%
     une hauteur en pixel
@@ -174,6 +173,18 @@
     height: 170px;
     width: 100%;
     object-fit: cover;
+  }
+  .restau-lesEtiq__etiquette .nouveau {
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    background-color: #99e2d0;
+    color: #008766;
+    height: 15%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .restau-lesEtiq__etiquette--descrip {
     display: grid;
@@ -207,14 +218,14 @@
     color: black;
     z-index: 1;
     opacity: 1;
-    transition: opacity 3500ms;
+    transition: opacity 500ms;
   }
   .restau-lesEtiq__etiquette--descrip--coeur .coeurPlein {
     color: plum;
     position: absolute;
     z-index: -1;
     opacity: 0;
-    transition: opacity 3500ms;
+    transition: opacity 500ms;
   }
   .restau-lesEtiq__etiquette--descrip--coeur:active .coeurPlein {
     z-index: 1;
@@ -427,6 +438,9 @@
     margin-left: 2%;
     width: 40%;
   }
+  .restau-lesEtiq__etiquette .blocImage {
+    position: relative;
+  }
   .restau-lesEtiq__etiquette img {
     /* width à 100%
     une hauteur en pixel
@@ -435,6 +449,18 @@
     height: 150px;
     width: 100%;
     object-fit: cover;
+  }
+  .restau-lesEtiq__etiquette .nouveau {
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    background-color: #99e2d0;
+    color: #008766;
+    height: 15%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .restau-lesEtiq__etiquette--descrip {
     display: grid;
@@ -688,6 +714,9 @@
     margin-left: 2%;
     width: 40%;
   }
+  .restau-lesEtiq__etiquette .blocImage {
+    position: relative;
+  }
   .restau-lesEtiq__etiquette img {
     /* width à 100%
     une hauteur en pixel
@@ -696,6 +725,18 @@
     height: 150px;
     width: 100%;
     object-fit: cover;
+  }
+  .restau-lesEtiq__etiquette .nouveau {
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    background-color: #99e2d0;
+    color: #008766;
+    height: 15%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .restau-lesEtiq__etiquette--descrip {
     display: grid;
