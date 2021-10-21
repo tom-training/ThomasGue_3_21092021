@@ -83,7 +83,7 @@
             width: 90%;
             font-family: Shrikhand, Courier, monospace, Arial;
             font-size: 1.4em;
-            text-align: center;
+            text-align: left;
 
             i{
             display: inline-block;
@@ -98,7 +98,7 @@
         margin-bottom: 10%;
 
         .trait{
-            width: 14%;
+            width: 11%;
             height: 2px;
             background-color: #99e2d0;
             border: none;
@@ -108,6 +108,7 @@
             font-family: Roboto;
             text-align: left;
             font-size: 1em;
+            font-weight: normal;
         }
 
         &-bulle{
@@ -120,6 +121,7 @@
             display: grid;
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
+            box-shadow: 1px 4px 3px #e7e7e7;
 
             &:hover{
 
@@ -159,10 +161,10 @@
                 overflow: hidden;
                 white-space: nowrap;   
                 text-overflow: ellipsis;      
-                width: 100%;
-                transition: width 1400ms;
+                width: 80%;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
+                transition: width 500ms;
             }
 
             &__prix{
@@ -178,11 +180,11 @@
                 align-items: flex-end;
                 justify-content: center;
 
-                padding-bottom: 6px;
+                padding-bottom: 13px;
                 
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                transition: transform 1400ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
+                transition: transform 500ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
 
             }
 
@@ -197,13 +199,13 @@
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 1400ms;
+                transition: opacity 500ms;
 
                 .ticked-rotating{
                     background-color: #99e2d0;
                     color: white;
                     opacity: 0;
-                    transition: opacity 4500ms, transform 1500ms 3000ms;
+                    transition: opacity 500ms, transform 500ms 200ms;
                 }
             }
 
@@ -217,8 +219,9 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;  
                 width: 100%;
-                transition: width 1400ms;
+                transition: width 500ms;
                 border-bottom-left-radius: 15px;  
+            
             }
         }
     }
@@ -235,6 +238,71 @@
         height: 50px;
     }
     
+    @keyframes plat {
+
+        0%{
+            transform: translateY(-9999px);
+        }   
+        
+        100%{
+            transform: translateY(0);
+        }
+    }
+    
+    .plat1{
+        animation: plat 1500ms 1000ms;
+        animation-fill-mode: backwards;
+    }
+    
+    .plat2{
+        animation: plat 1500ms 1500ms;
+        animation-fill-mode: backwards;
+    }
+    
+    .plat3{
+        animation: plat 1500ms 2000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat4{
+        animation: plat 1500ms 2500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat5{
+        animation: plat 1500ms 3000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat6{
+        animation: plat 1500ms 3500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat7{
+        animation: plat 1500ms 4000ms;
+        animation-fill-mode: backwards;
+
+    }
+
+    .plat8{
+        animation: plat 1500ms 4500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat9{
+        animation: plat 1500ms 5000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat10{
+        animation: plat 1500ms 5500ms;
+        animation-fill-mode: backwards;
+    }
+
+
+
+
     
     footer{
     
@@ -252,7 +320,7 @@
         }
     
         p{
-            margin-bottom: 5%;
+            margin-bottom: 2%;
         }
     
         i{
@@ -361,7 +429,7 @@
         margin-bottom: 10%;
         
         .trait{
-            width: 14%;
+            width: 5%;
             height: 2px;
             background-color: #99e2d0;
             border: none;
@@ -371,6 +439,7 @@
             font-family: Roboto;
             text-align: left;
             font-size: 1em;
+            font-weight: normal;
         }
 
         &-cadre{
@@ -390,6 +459,7 @@
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
             width: 45%;
+            box-shadow: 1px 4px 3px #e7e7e7;
 
             &:hover{
 
@@ -429,8 +499,8 @@
                 overflow: hidden;
                 white-space: nowrap;   
                 text-overflow: ellipsis;      
-                width: 100%;
-                transition: width 1400ms;
+                width: 80%;
+                transition: width 500ms;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
             }
@@ -448,11 +518,11 @@
                 align-items: flex-end;
                 justify-content: center;
 
-                padding-bottom: 6px;
+                padding-bottom: 13px;
                 
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                transition: transform 1400ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
+                transition: transform 500ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
 
             }
 
@@ -467,13 +537,13 @@
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 1400ms;
+                transition: opacity 500ms;
 
                 .ticked-rotating{
                     background-color: #99e2d0;
                     color: white;
                     opacity: 0;
-                    transition: opacity 4500ms, transform 1500ms 3000ms;
+                    transition: opacity 500ms, transform 500ms 200ms;
                 }
             }
 
@@ -487,7 +557,7 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;  
                 width: 100%;
-                transition: width 1400ms;
+                transition: width 500ms;
                 border-bottom-left-radius: 15px;  
             }
         }
@@ -508,13 +578,75 @@
         align-items: center;
         justify-content: center;
     }
+
+    @keyframes plat {
+
+        0%{
+            transform: translateY(-9999px);
+        }   
+        
+        100%{
+            transform: translateY(0);
+        }
+    }
+    
+    .plat1{
+        animation: plat 1500ms 1000ms;
+        animation-fill-mode: backwards;
+    }
+    
+    .plat2{
+        animation: plat 1500ms 1500ms;
+        animation-fill-mode: backwards;
+    }
+    
+    .plat3{
+        animation: plat 1500ms 2000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat4{
+        animation: plat 1500ms 2500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat5{
+        animation: plat 1500ms 3000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat6{
+        animation: plat 1500ms 3500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat7{
+        animation: plat 1500ms 4000ms;
+        animation-fill-mode: backwards;
+
+    }
+
+    .plat8{
+        animation: plat 1500ms 4500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat9{
+        animation: plat 1500ms 5000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat10{
+        animation: plat 1500ms 5500ms;
+        animation-fill-mode: backwards;
+    }
     
     
     footer{
     
-        padding-top: 10%;
-        padding-left: 10%;
-        padding-bottom: 10%;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-bottom: 5%;
         width: 100%;
         color: white;
         background-color:#353535;
@@ -526,7 +658,7 @@
         }
     
         p{
-            margin-bottom: 5%;
+            margin-bottom: 2%;
         }
     
         i{
@@ -639,7 +771,7 @@
         margin-bottom: 2%;
 
         .trait{
-            width: 14%;
+            width: 4%;
             height: 2px;
             background-color: #99e2d0;
             border: none;
@@ -649,6 +781,7 @@
             font-family: Roboto;
             text-align: left;
             font-size: 1em;
+            font-weight: normal;
         }
 
         &-cadre{
@@ -669,6 +802,7 @@
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
             width: 30%;
+            box-shadow: 1px 4px 3px #e7e7e7;
 
             &:hover{
 
@@ -709,7 +843,7 @@
                 white-space: nowrap;   
                 text-overflow: ellipsis;      
                 width: 80%;
-                transition: width 1400ms;
+                transition: width 500ms;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
             }
@@ -727,11 +861,11 @@
                 align-items: flex-end;
                 justify-content: center;
 
-                padding-bottom: 6px;
+                padding-bottom: 13px;
                 
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
-                transition: transform 1400ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
+                transition: transform 500ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
 
             }
 
@@ -746,13 +880,13 @@
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 1400ms;
+                transition: opacity 500ms;
 
                 .ticked-rotating{
                     background-color: #99e2d0;
                     color: white;
                     opacity: 0;
-                    transition: opacity 4500ms, transform 1500ms 3000ms;
+                    transition: opacity 500ms, transform 500ms 200ms;
                 }
             }
 
@@ -766,7 +900,7 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;  
                 width: 100%;
-                transition: width 1400ms;
+                transition: width 500ms;
                 border-bottom-left-radius: 15px;  
             }
         }
@@ -787,12 +921,73 @@
         justify-content: center;
     }
     
+    @keyframes plat {
+
+        0%{
+            transform: translateY(-9999px);
+        }   
+        
+        100%{
+            transform: translateY(0);
+        }
+    }
+    
+    .plat1{
+        animation: plat 1500ms 1000ms;
+        animation-fill-mode: backwards;
+    }
+    
+    .plat2{
+        animation: plat 1500ms 1500ms;
+        animation-fill-mode: backwards;
+    }
+    
+    .plat3{
+        animation: plat 1500ms 2000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat4{
+        animation: plat 1500ms 2500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat5{
+        animation: plat 1500ms 3000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat6{
+        animation: plat 1500ms 3500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat7{
+        animation: plat 1500ms 4000ms;
+        animation-fill-mode: backwards;
+
+    }
+
+    .plat8{
+        animation: plat 1500ms 4500ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat9{
+        animation: plat 1500ms 5000ms;
+        animation-fill-mode: backwards;
+    }
+
+    .plat10{
+        animation: plat 1500ms 5500ms;
+        animation-fill-mode: backwards;
+    }
     
     footer{
     
-        padding-top: 10%;
-        padding-left: 10%;
-        padding-bottom: 10%;
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-bottom: 5%;
         width: 100%;
         color: white;
         background-color:#353535;
@@ -804,7 +999,7 @@
         }
     
         p{
-            margin-bottom: 5%;
+            margin-bottom: 2%;
         }
     
         i{
