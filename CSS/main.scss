@@ -10,6 +10,12 @@
         padding: 0;
         width: 100%;
     }
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
     
     #mainContainer{
         display: flex;
@@ -31,6 +37,8 @@
         width: 100%;
         padding-top: 5%;
         padding-bottom: 5%;
+        box-shadow: 0px 3px 5px #d5d5d5;
+        z-index: 1;
 
         #logo{
             width: 50%;
@@ -53,11 +61,10 @@
     
         &-lequel{
             background-color: #eaeaea;
-            
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
             display: flex;
             justify-content: center;
+            padding-top: 3%;
+            padding-bottom: 3%;
     
             &__ville{ 
               
@@ -71,8 +78,8 @@
         }
     
         &-slogan{
-            padding: 1% 5% 1% 5%;
-            font-size: 1.5rem;
+            padding: 10% 15% 5% 15%;
+            font-size: 1.5em;
             font-weight: bold;
             font-family: Roboto;
         }
@@ -82,7 +89,7 @@
         }
     
         &-bouton{
-            margin: 5% 15% 15% 15%;
+            margin: 5% 15% 12% 15%;
             padding: 3%;
             color: white;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
@@ -220,7 +227,7 @@
                 .nouveau{
                     position: absolute;
                     right: 15px;
-                    top: 4px;
+                    top: 15px;
                     background-color: #99e2d0;
                     color: #008766;
                     height: 15%;
@@ -235,22 +242,23 @@
                     display: grid;
 
                     grid-template-columns: 3fr 1fr;
-                    grid-template-rows: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr;
                 
-                    height: 25%;
+                    height: 65px;
 
                     background-color: white;
                     color: black;
         
                     &--nom{
 
-                        grid-row: 1;
+                        grid-row: 2;
                         grid-column: 1;
                         font-weight: bold;
                         padding-left: 5%;
                         display: flex;
                         align-items: flex-start;
                         font-size: 0.9em;
+                        margin-bottom: 6px;
                         
 
                         a{
@@ -267,7 +275,7 @@
                         justify-content: center;
                         
                         grid-column: 2;
-                        grid-row: 1;
+                        grid-row: 2;
 
                         
                       
@@ -307,7 +315,7 @@
                     &--quartier{
                     
                         grid-column: 1;
-                        grid-row: 2;
+                        grid-row: 3;
                         padding-left: 5%;
 
                         font-size: 0.9em;
@@ -354,7 +362,6 @@
 }
 
 /*Medium devices (tablets, less than 992px)*/
-/*@media (max-width: 991.98px) {   */
 
 @media (min-width: 575.99px) and (max-width: 991.98px){    
 
@@ -551,7 +558,6 @@
         }
         
         &-lesEtiq{
-
             width: 90%;
             display: flex;
             flex-wrap: wrap;
@@ -560,7 +566,6 @@
             
 
             &__etiquette{
-        
                 border-radius: 20px;
                 margin-bottom: 10%;
                 overflow: hidden;
