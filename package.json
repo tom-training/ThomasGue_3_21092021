@@ -4,7 +4,7 @@
   "description": "Projet 3 OpenClassRooms",
   "main": "index.js",
   "scripts": {
-       "sass": "sass --watch ./CSS/main.scss:./CSS/style.css",
+       "sass": "sass --watch ./CSS/main.scss:./CSS/style.css ./CSS/main_lesMenus.scss:./CSS/lesMenus.css",
        "prefix":"postcss ./CSS/style.css --use autoprefixer -d ./CSS/prefixed/" 
   },
   "repository": {
