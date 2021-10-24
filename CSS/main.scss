@@ -16,6 +16,10 @@
         margin: 0;
         padding: 0;
     }
+
+    a{
+        text-decoration: none;
+    }
     
     #mainContainer{
         display: flex;
@@ -156,6 +160,7 @@
                     justify-content: flex-start;
                     align-items: center;
                     width: 85%;
+                    color: #1f1d1f;
                 }
         
                 i{
@@ -297,7 +302,7 @@
                         }
                 
                         
-                        &:active{
+                        &:hover{
                 
                             .coeurPlein{
                                     z-index: 1;
@@ -369,6 +374,16 @@
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
     }
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    a{
+        text-decoration: none;
+    }    
     
     #mainContainer{
         display: flex;
@@ -383,13 +398,6 @@
         border: none;
         font: inherit;	
     }
-    
-    /*
-    h1, h2, h3, h4
-    {
-        font-family: Shrikhand, Courier, monospace, Arial;
-    }
-    */
         
     header{
         text-align: center;
@@ -414,7 +422,7 @@
         text-align: center;
         background-color: #f6f6f6;
         width: 100%;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     
         &-lequel{
             background-color: #eaeaea;
@@ -423,6 +431,8 @@
 
             display: flex;
             justify-content: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
     
             &__ville{ 
                 /* display: flex;
@@ -438,8 +448,7 @@
         }
     
         &-slogan{
-    
-            padding: 1% 5% 1% 5%;
+            padding: 2% 5% 2% 5%;
             font-size: 1.5rem;
             font-weight: bold;
             font-family: Roboto;
@@ -450,7 +459,7 @@
         }
     
         &-bouton{
-            margin: 5% 15% 15% 15%;
+            margin: 5% 15% 5% 15%;
             padding: 3%;
             color: white;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
@@ -462,10 +471,9 @@
     
         background-color: #ffffff;
         width: 100%;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         width: 90%;
         align-self: center;
-       
         
         h1{
             font-family: Roboto;
@@ -514,15 +522,15 @@
                 }
         
                 &--label{
-        
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     width: 85%;
+                    color: #1f1d1f;
                 }
         
                 i{
-                    margin-right: 3%;
+                    margin-right: 7%;
                     color: #7e7e7e;    
                 }
         
@@ -543,8 +551,8 @@
         
         background-color: #f6f6f6;
         
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
         width: 100%;
 
         display: flex;
@@ -606,7 +614,7 @@
                     grid-template-columns: 3fr 1fr;
                     grid-template-rows: 1fr 1fr;
                 
-                    height: 40%;
+                    height: 50px;
 
                     background-color: white;
                     color: black;
@@ -657,7 +665,7 @@
                         }
                 
                         
-                        &:active{
+                        &:hover{
                 
                             .coeurPlein{
                                     z-index: 1;
@@ -690,19 +698,19 @@
     
     footer{
     
-        padding: 10%;
+        padding: 7% 5% 7% 5%;
         color: white;
         background-color:#353535;
         overflow: hidden;
 
         h1{
             font-size: 2em;
-            margin-bottom: 5%;
+            margin-bottom: 1%;
             font-family: Shrikhand, Courier, monospace, Arial;
         }
     
         p{
-            margin-bottom: 5%;
+            margin-bottom: 1%;
 
             a{
                 text-decoration: none;
@@ -725,6 +733,16 @@
     body{
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
+    }
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    a{
+        text-decoration: none;
     }
     
     #mainContainer{
@@ -772,7 +790,7 @@
         text-align: center;
         background-color: #f6f6f6;
         width: 100%;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     
         &-lequel{
             background-color: #eaeaea;
@@ -781,23 +799,24 @@
 
             display: flex;
             justify-content: center;
+            padding-top: 2%;
+            padding-bottom: 2%;
     
             &__ville{ 
                 /* display: flex;
                 align-items: center; */
                 height: 100%;
+                font-size: 1.2em;
 
                 i{
                     margin-right: 1em;
                     height: 100%;
                 }
-
             }
         }
     
         &-slogan{
-    
-            padding: 1% 5% 1% 5%;
+            padding: 5% 5% 5% 5%;
             font-size: 1.5rem;
             font-weight: bold;
             font-family: Roboto;
@@ -808,8 +827,8 @@
         }
     
         &-bouton{
-            margin: 5% 15% 15% 15%;
-            padding: 3%;
+            margin: 5% 15% 5% 15%;
+            padding: 2%;
             color: white;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
             border-radius: 50px;
@@ -820,41 +839,35 @@
     
         background-color: #ffffff;
         width: 100%;
-        margin-bottom: 10%;
+        margin-bottom: 2%;
         width: 90%;
         align-self: center;
        
         
         h1{
             font-family: Roboto;
-            margin-bottom: 7%;
+            margin-bottom: 5%;
         }
     
         &-lesBulles{
-
             width: 100%;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             
             &__bulle{
-    
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-
                 margin-right: 7%;
                 
-                width: 35%;
+                width: 25%;
                 border-radius: 20px;
                 background-color: #f6f6f6;
                 margin-bottom: 5%;
                 height: 60px;
-
                 box-shadow: 3px 4px 2px #e6e6e6;
-
                 text-decoration: none;
-                
         
                 &--rond{
                     background-color: #9356dc;
@@ -876,10 +889,11 @@
                     justify-content: flex-start;
                     align-items: center;
                     width: 85%;
+                    color: #1f1d1f;
                 }
         
                 i{
-                    margin-right: 3%;
+                    margin-right: 10%;
                     color: #7e7e7e;    
                 }
         
@@ -900,8 +914,8 @@
         
         background-color: #f6f6f6;
         
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 3%;
+        padding-bottom: 3%;
         width: 100%;
 
         display: flex;
@@ -921,8 +935,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            
-            
 
             &__etiquette{
         
@@ -950,7 +962,7 @@
                 .nouveau{
                     position: absolute;
                     right: 15px;
-                    top: 4px;
+                    top: 15px;
                     background-color: #99e2d0;
                     color: #008766;
                     height: 15%;
@@ -961,13 +973,11 @@
                 }
         
                 &--descrip{
-        
                     display: grid;
                     grid-template-columns: 3fr 1fr;
                     grid-template-rows: 1fr 1fr;
-                
-                    height: 40%;
-
+                    padding-top: 1%;
+                    height: 60px;
                     background-color: white;
                     color: black;
         
@@ -991,12 +1001,11 @@
                     &--coeur{
                        
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         justify-content: center;
                         
                         grid-column: 2;
                         grid-row: 1;
-
                         font-size: 1em;
                       
                         .coeurVide{
@@ -1017,7 +1026,7 @@
                         }
                 
                         
-                        &:active{
+                        &:hover{
                 
                             .coeurPlein{
                                     z-index: 1;
@@ -1033,12 +1042,10 @@
                     }
         
                     &--quartier{
-                    
                         grid-column: 1;
                         grid-row: 2;
                         padding-left: 5%;
                         font-size: 1em;
-                       
                     }
                 }
             }
@@ -1047,19 +1054,20 @@
     
     footer{
     
-        padding: 2%;
+        padding: 2% 5% 5% 5%;
         color: white;
         background-color:#353535;
         overflow: hidden;
 
         h1{
             font-size: 1.5em;
-            margin-bottom: 5%;
+            margin-bottom: 1%;
             font-family: Shrikhand, Courier, monospace, Arial;
         }
     
         p{
             
+            margin-bottom: 1%;
             a{
                 text-decoration: none;
                 color: #ffffff;
