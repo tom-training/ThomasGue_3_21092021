@@ -153,6 +153,30 @@
     color: darkgray;
   }
 
+  .loading {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid;
+    border-top-color: #9356DC;
+    border-right-color: #FF79DA;
+    border-bottom-color: #99E2D0;
+    border-left-color: #9356DC;
+    border-radius: 50%;
+    animation: chargement 8s ease;
+  }
+
+  @keyframes chargement {
+    to {
+      transform: rotate(5turn);
+    }
+  }
   #mainContainer {
     display: flex;
     justify-content: center;
@@ -219,9 +243,9 @@
   }
   .lieu-bouton {
     margin: 5% 15% 12% 15%;
+    background: linear-gradient(135deg, #FF79DA, #9356DC);
     padding: 3%;
     color: white;
-    background: linear-gradient(135deg, #eb72da, #ad5edb);
     border-radius: 50px;
     box-shadow: 2px 4px 4px #cacaca;
   }
@@ -571,6 +595,30 @@
     color: darkgray;
   }
 
+  .loading {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid;
+    border-top-color: #9356DC;
+    border-right-color: #FF79DA;
+    border-bottom-color: #99E2D0;
+    border-left-color: #9356DC;
+    border-radius: 50%;
+    animation: chargement 8s ease;
+  }
+
+  @keyframes chargement {
+    to {
+      transform: rotate(5turn);
+    }
+  }
   #mainContainer {
     display: flex;
     justify-content: center;
@@ -992,6 +1040,30 @@
     color: darkgray;
   }
 
+  .loading {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .loading::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid;
+    border-top-color: #9356DC;
+    border-right-color: #FF79DA;
+    border-bottom-color: #99E2D0;
+    border-left-color: #9356DC;
+    border-radius: 50%;
+    animation: chargement 8s ease;
+  }
+
+  @keyframes chargement {
+    to {
+      transform: rotate(5turn);
+    }
+  }
   #mainContainer {
     display: flex;
     justify-content: center;
@@ -1066,9 +1138,9 @@
   }
   .lieu-bouton {
     margin: 5% 15% 5% 15%;
+    background: linear-gradient(135deg, #eb72da, #ad5edb);
     padding: 2%;
     color: white;
-    background: linear-gradient(135deg, #eb72da, #ad5edb);
     border-radius: 50px;
     box-shadow: 2px 4px 4px #cacaca;
   }

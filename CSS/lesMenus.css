@@ -189,12 +189,12 @@
   button {
     border: none;
     font: inherit;
-    padding: 3%;
-    color: white;
     background: linear-gradient(180deg, #eb72da, #ad5edb);
-    border-radius: 50px;
     width: 60%;
     height: 50px;
+    padding: 3%;
+    color: white;
+    border-radius: 50px;
     box-shadow: 2px 4px 4px #cacaca;
   }
   button:hover {
@@ -791,15 +791,15 @@
   button {
     border: none;
     font: inherit;
-    padding: 3%;
-    color: white;
     background: linear-gradient(180deg, #eb72da, #ad5edb);
-    border-radius: 50px;
     width: 30%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2%;
+    color: white;
+    border-radius: 50px;
     box-shadow: 2px 4px 4px #cacaca;
   }
   button:hover {

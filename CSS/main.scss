@@ -186,6 +186,33 @@
         
         color: darkgray;
     }
+
+    .loading{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .loading::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+
+        border: 10px solid;
+        border-top-color: $couleurPrimaire;
+        border-right-color: $couleurSecondaire;
+        border-bottom-color: $couleurTertiaire;
+        border-left-color: $couleurPrimaire;
+        
+        border-radius: 50%;
+        animation: chargement 8s ease;
+    }
+
+    @keyframes chargement{
+        to{
+            transform: rotate(5turn);
+        }
+    }
     
     
     #mainContainer{
@@ -226,6 +253,14 @@
         width: 100%;
     }
     
+    @mixin boutonRose{
+    
+        padding: 3%;
+        color: white;
+        border-radius: 50px;
+        box-shadow: 2px 4px 4px #cacaca;
+    }
+
     .lieu{
     
         text-align: center;
@@ -264,11 +299,8 @@
     
         &-bouton{
             margin: 5% 15% 12% 15%;
-            padding: 3%;
-            color: white;
-            background: linear-gradient(135deg, #eb72da, #ad5edb);
-            border-radius: 50px;
-            box-shadow: 2px 4px 4px #cacaca;
+            background: linear-gradient(135deg, $couleurSecondaire, $couleurPrimaire);
+            @include boutonRose;
 
             &:hover{
                 box-shadow: 8px 8px 8px #cacaca;
@@ -725,6 +757,32 @@
         color: darkgray;
     }
     
+    .loading{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .loading::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+
+        border: 10px solid;
+        border-top-color: $couleurPrimaire;
+        border-right-color: $couleurSecondaire;
+        border-bottom-color: $couleurTertiaire;
+        border-left-color: $couleurPrimaire;
+        
+        border-radius: 50%;
+        animation: chargement 8s ease;
+    }
+
+    @keyframes chargement{
+        to{
+            transform: rotate(5turn);
+        }
+    }
     
     #mainContainer{
         display: flex;
@@ -1252,14 +1310,39 @@
         font-size: 1em;
         font-weight: bold;
         margin-left: 2%;
-        
         animation: barDeProgression 4500ms 4500ms;
         animation-fill-mode: backwards;
 
         color: darkgray;
     }
     
-    
+    .loading{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .loading::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+
+        border: 10px solid;
+        border-top-color: $couleurPrimaire;
+        border-right-color: $couleurSecondaire;
+        border-bottom-color: $couleurTertiaire;
+        border-left-color: $couleurPrimaire;
+        
+        border-radius: 50%;
+        animation: chargement 8s ease;
+    }
+
+    @keyframes chargement{
+        to{
+            transform: rotate(5turn);
+        }
+    }
+
     #mainContainer{
         display: flex;
         justify-content: center;
@@ -1303,6 +1386,17 @@
         width: 100%;
     }
     
+    @mixin boutonRose{
+        padding: 2%;
+        color: white;
+        border-radius: 50px;
+        box-shadow: 2px 4px 4px #cacaca;
+    
+        &:hover{
+            box-shadow: 8px 8px 8px #cacaca;
+        }
+    }
+
     .lieu{
     
         text-align: center;
@@ -1346,15 +1440,8 @@
     
         &-bouton{
             margin: 5% 15% 5% 15%;
-            padding: 2%;
-            color: white;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
-            border-radius: 50px;
-            box-shadow: 2px 4px 4px #cacaca;
-
-            &:hover{
-                box-shadow: 8px 8px 8px #cacaca;
-            }
+            @include boutonRose;
         }
     }
     
