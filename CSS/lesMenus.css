@@ -123,7 +123,7 @@
   }
   .carte-bulle:hover .ticked-rotating {
     opacity: 1;
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
   .carte-bulle .carte-bulle__titre {
     font-weight: bold;
@@ -195,6 +195,10 @@
     border-radius: 50px;
     width: 60%;
     height: 50px;
+    box-shadow: 2px 4px 4px #cacaca;
+  }
+  button:hover {
+    box-shadow: 8px 8px 8px #cacaca;
   }
 
   @keyframes plat {
@@ -270,6 +274,13 @@
   }
   footer p {
     margin-bottom: 2%;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  footer p a:hover {
+    color: #c27bb4;
   }
   footer i {
     margin-right: 2%;
@@ -411,7 +422,7 @@
   }
   .carte-bulle:hover .ticked-rotating {
     opacity: 1;
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
   .carte-bulle .carte-bulle__titre {
     font-weight: bold;
@@ -486,6 +497,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 4px 4px #cacaca;
+  }
+  button:hover {
+    box-shadow: 8px 8px 8px #cacaca;
   }
 
   @keyframes plat {
@@ -561,6 +576,13 @@
   }
   footer p {
     margin-bottom: 2%;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  footer p a:hover {
+    color: #c27bb4;
   }
   footer i {
     margin-right: 2%;
@@ -703,7 +725,7 @@
   }
   .carte-bulle:hover .ticked-rotating {
     opacity: 1;
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
   .carte-bulle .carte-bulle__titre {
     font-weight: bold;
@@ -778,6 +800,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 2px 4px 4px #cacaca;
+  }
+  button:hover {
+    box-shadow: 8px 8px 8px #cacaca;
   }
 
   @keyframes plat {
@@ -853,6 +879,13 @@
   }
   footer p {
     margin-bottom: 2%;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  footer p a:hover {
+    color: #c27bb4;
   }
   footer i {
     margin-right: 2%;

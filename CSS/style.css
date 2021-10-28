@@ -20,12 +20,147 @@
     text-decoration: none;
   }
 
+  @keyframes disparition {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  @keyframes apparition {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  @keyframes barDeProgression {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes titreOhMy {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  #launcher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: disparition 1000ms 9000ms;
+    animation-fill-mode: forwards;
+  }
+
+  .titreLauncher {
+    margin-bottom: 10%;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+  }
+  .titreLauncher-un {
+    color: #9356DC;
+    margin-right: 2%;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms;
+    animation-fill-mode: backwards;
+  }
+  .titreLauncher-deux {
+    color: #FF79DA;
+    margin-right: 2%;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms 1500ms;
+    animation-fill-mode: backwards;
+  }
+  .titreLauncher-trois {
+    color: #99E2D0;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms 3000ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar {
+    height: 14px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+
+  .progressBar-primaire {
+    height: 14px;
+    width: 30%;
+    background-color: #9356DC;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-secondaire {
+    height: 14px;
+    width: 30%;
+    background-color: #FF79DA;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms 1500ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-tertiaire {
+    height: 14px;
+    width: 30%;
+    background-color: #99E2D0;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms 3000ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-percentage {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 2%;
+    animation: barDeProgression 4500ms 4500ms;
+    animation-fill-mode: backwards;
+    color: darkgray;
+  }
+
   #mainContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
+    animation: apparition 2000ms 9000ms;
+    animation-fill-mode: backwards;
   }
 
   button, input {
@@ -88,6 +223,10 @@
     color: white;
     background: linear-gradient(135deg, #eb72da, #ad5edb);
     border-radius: 50px;
+    box-shadow: 2px 4px 4px #cacaca;
+  }
+  .lieu-bouton:hover {
+    box-shadow: 8px 8px 8px #cacaca;
   }
 
   .fonction {
@@ -299,11 +438,146 @@
     text-decoration: none;
   }
 
+  @keyframes disparition {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  @keyframes apparition {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  @keyframes barDeProgression {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes titreOhMy {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  #launcher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: disparition 1000ms 9000ms;
+    animation-fill-mode: forwards;
+  }
+
+  .titreLauncher {
+    margin-bottom: 10%;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+  }
+  .titreLauncher-un {
+    color: #9356DC;
+    margin-right: 2%;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms;
+    animation-fill-mode: backwards;
+  }
+  .titreLauncher-deux {
+    color: #FF79DA;
+    margin-right: 2%;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms 1500ms;
+    animation-fill-mode: backwards;
+  }
+  .titreLauncher-trois {
+    color: #99E2D0;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms 3000ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar {
+    height: 14px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+
+  .progressBar-primaire {
+    height: 14px;
+    width: 30%;
+    background-color: #9356DC;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-secondaire {
+    height: 14px;
+    width: 30%;
+    background-color: #FF79DA;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms 1500ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-tertiaire {
+    height: 14px;
+    width: 30%;
+    background-color: #99E2D0;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms 3000ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-percentage {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 2%;
+    animation: barDeProgression 4500ms 4500ms;
+    animation-fill-mode: backwards;
+    color: darkgray;
+  }
+
   #mainContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    animation: apparition 2000ms 9000ms;
+    animation-fill-mode: backwards;
   }
 
   button, input {
@@ -367,6 +641,10 @@
     color: white;
     background: linear-gradient(135deg, #eb72da, #ad5edb);
     border-radius: 50px;
+    box-shadow: 2px 4px 4px #cacaca;
+  }
+  .lieu-bouton:hover {
+    box-shadow: 8px 8px 8px #cacaca;
   }
 
   .fonction {
@@ -581,11 +859,146 @@
     text-decoration: none;
   }
 
+  @keyframes disparition {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  @keyframes apparition {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  @keyframes barDeProgression {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  @keyframes titreOhMy {
+    0% {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  #launcher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: disparition 1000ms 9000ms;
+    animation-fill-mode: forwards;
+  }
+
+  .titreLauncher {
+    margin-bottom: 10%;
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+  }
+  .titreLauncher-un {
+    color: #9356DC;
+    margin-right: 2%;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms;
+    animation-fill-mode: backwards;
+  }
+  .titreLauncher-deux {
+    color: #FF79DA;
+    margin-right: 2%;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms 1500ms;
+    animation-fill-mode: backwards;
+  }
+  .titreLauncher-trois {
+    color: #99E2D0;
+    transform-origin: 0% 50%;
+    animation: titreOhMy 1500ms 3000ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar {
+    height: 14px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+
+  .progressBar-primaire {
+    height: 14px;
+    width: 30%;
+    background-color: #9356DC;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-secondaire {
+    height: 14px;
+    width: 30%;
+    background-color: #FF79DA;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms 1500ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-tertiaire {
+    height: 14px;
+    width: 30%;
+    background-color: #99E2D0;
+    transform-origin: 0% 50%;
+    animation: barDeProgression 1500ms 3000ms;
+    animation-fill-mode: backwards;
+  }
+
+  .progressBar-percentage {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 2%;
+    animation: barDeProgression 4500ms 4500ms;
+    animation-fill-mode: backwards;
+    color: darkgray;
+  }
+
   #mainContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    animation: apparition 2000ms 9000ms;
+    animation-fill-mode: backwards;
   }
 
   button, input {
@@ -657,6 +1070,10 @@
     color: white;
     background: linear-gradient(135deg, #eb72da, #ad5edb);
     border-radius: 50px;
+    box-shadow: 2px 4px 4px #cacaca;
+  }
+  .lieu-bouton:hover {
+    box-shadow: 8px 8px 8px #cacaca;
   }
 
   .fonction {

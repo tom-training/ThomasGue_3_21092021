@@ -147,7 +147,7 @@
 
                 .ticked-rotating{
                     opacity: 1;
-                    transform: rotate(360deg);
+                    transform: rotate(-360deg);
                 }
             }
 
@@ -236,6 +236,11 @@
         border-radius: 50px;
         width: 60%;
         height: 50px;
+        box-shadow: 2px 4px 4px #cacaca;
+
+        &:hover{
+            box-shadow: 8px 8px 8px #cacaca;
+        }
     }
     
     @keyframes plat {
@@ -321,6 +326,14 @@
     
         p{
             margin-bottom: 2%;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+
+                &:hover{
+                    color: #c27bb4;
+                }
+            }
         }
     
         i{
@@ -485,7 +498,7 @@
 
                 .ticked-rotating{
                     opacity: 1;
-                    transform: rotate(360deg);
+                    transform: rotate(-360deg);
                 }
             }
 
@@ -577,6 +590,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        box-shadow: 2px 4px 4px #cacaca;
+
+        &:hover{
+            box-shadow: 8px 8px 8px #cacaca;
+        }
     }
 
     @keyframes plat {
@@ -656,9 +675,17 @@
             margin-bottom: 5%;
             font-family: Shrikhand, Courier, monospace, Arial;
         }
-    
+
         p{
             margin-bottom: 2%;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+
+                &:hover{
+                    color: #c27bb4;
+                }
+            }
         }
     
         i{
@@ -828,7 +855,7 @@
 
                 .ticked-rotating{
                     opacity: 1;
-                    transform: rotate(360deg);
+                    transform: rotate(-360deg);
                 }
             }
 
@@ -919,6 +946,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        box-shadow: 2px 4px 4px #cacaca;
+
+        &:hover{
+            box-shadow: 8px 8px 8px #cacaca;
+        }
     }
     
     @keyframes plat {
@@ -999,7 +1032,16 @@
         }
     
         p{
+            
             margin-bottom: 2%;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+
+                &:hover{
+                    color: #c27bb4;
+                }
+            }
         }
     
         i{
