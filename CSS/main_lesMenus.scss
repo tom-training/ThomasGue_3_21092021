@@ -20,7 +20,6 @@
     }
 
     #mainContainer{
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +30,6 @@
     
   
     header{
-
         padding: 5%;
         background-color: #ffffff;
         display: grid;
@@ -48,7 +46,6 @@
         a{
             color: #5a5a5a;
             grid-column: 1;
-            
             display: flex;
             align-items: center;
             text-decoration: none;
@@ -57,9 +54,7 @@
     
 
     main{
-
         width: 100%;
-
         &>img{
             height: 215px;
             width: 100%;
@@ -111,13 +106,20 @@
             font-weight: normal;
         }
 
+        &-cartouche{
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+
         &-bulle{
-            
             position: relative;   /* permet d'exploiter le z-index */
+            z-index: 1;
             margin-top: 5%;
             border-radius: 15px;
             background-color: #ffffff;
             height: 4em;
+            width: 100%;
             display: grid;
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
@@ -126,28 +128,31 @@
             &:hover{
 
                 .carte-bulle__titre{
-                    z-index: 0;
                     width: 60%;
                 }
                 .carte-bulle__prix{
                     transform: translateX(-100%);
                     border-bottom-right-radius: 0;
-                    border-top-right-radius: 0;
-                    z-index: 1;        
+                    border-top-right-radius: 0;     
                 }
 
                 .carte-bulle__complement{
-                    z-index: 0;
                     width: 75%;
                 }
 
-                .carte-bulle__ticked{
+                .carte-bulle__endRight{
                     opacity: 1;
                 }
 
-                .ticked-rotating{
+                & +.carte-bulle__ticked{
                     opacity: 1;
-                    transform: rotate(-360deg);
+                    transform: scale(1) translateX(-31px);
+                    z-index: 1;
+                }
+
+                & +.carte-bulle__ticked .ticked-rotating{
+                    opacity: 1;
+                    transform: rotate(360deg);
                 }
             }
 
@@ -164,48 +169,47 @@
                 width: 80%;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
-                transition: width 500ms;
+                transition: width 500ms;                        /* TRANSITION */
             }
 
             &__prix{
                 grid-column: 3;
                 grid-row: 1 / 6;
-                
                 font-size: 0.9em;
                 font-weight: bold;               
-                
                 background-color: #ffffff;
-
+                z-index: 0;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
-
                 padding-bottom: 13px;
-                
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
                 transition: transform 500ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
-
             }
 
             &__ticked{
-                grid-column: 3;
-                grid-row: 1 / 6;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 background-color: #99e2d0;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 500ms;
+                
+                margin-top: 5%;
+                height: 4em;
+                width: 1%;
 
+                transform: scale(0.1);
+                transform-origin: right;
+                transition: opacity 100ms, transform 500ms;     /* TRANSITION */
+                
                 .ticked-rotating{
                     background-color: #99e2d0;
                     color: white;
                     opacity: 0;
-                    transition: opacity 500ms, transform 500ms 200ms;
+                    transition: opacity 500ms, transform 500ms 200ms;       /* TRANSITION */
                 }
             }
 
@@ -219,15 +223,24 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;  
                 width: 100%;
-                transition: width 500ms;
+                transition: width 500ms;                /* TRANSITION */
                 border-bottom-left-radius: 15px;  
-            
+            }
+
+            &__endRight{
+                grid-column: 3;
+                grid-row: 1 / 6;
+                background-color: #99e2d0;
+                opacity: 0;
+                z-index: -1;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                transition: opacity 100ms;
             }
         }
     }
     
     @mixin boutonRose{
-    
         padding: 3%;
         color: white;
         border-radius: 50px;
@@ -248,8 +261,7 @@
         }
     }
     
-    @keyframes plat {
-
+    @keyframes plat{
         0%{
             transform: translateY(-9999px);
         }   
@@ -258,64 +270,65 @@
             transform: translateY(0);
         }
     }
-    
+
+    $depart: (  1:    0ms, 
+                2:  250ms, 
+                3:  500ms, 
+                4:  750ms, 
+                5: 1000ms, 
+                6: 1250ms, 
+                7: 1500ms, 
+                8: 1750ms, 
+                9: 2000ms, 
+                10:2250ms
+            );   /* liste de timing de départs */
+
+    @mixin createAnimation($num){
+        animation: plat 250ms map-get($depart, $num);
+        animation-fill-mode: backwards;
+    }
+
     .plat1{
-        animation: plat 1500ms 1000ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(1);
     }
-    
+
     .plat2{
-        animation: plat 1500ms 1500ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(2);
     }
-    
+
     .plat3{
-        animation: plat 1500ms 2000ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(3);
     }
 
     .plat4{
-        animation: plat 1500ms 2500ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(4);
     }
 
     .plat5{
-        animation: plat 1500ms 3000ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(5);
     }
 
     .plat6{
-        animation: plat 1500ms 3500ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(6);
     }
 
     .plat7{
-        animation: plat 1500ms 4000ms;
-        animation-fill-mode: backwards;
-
+        @include createAnimation(7);
     }
 
     .plat8{
-        animation: plat 1500ms 4500ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(8);
     }
 
     .plat9{
-        animation: plat 1500ms 5000ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(9);
     }
 
     .plat10{
-        animation: plat 1500ms 5500ms;
-        animation-fill-mode: backwards;
+        @include createAnimation(10);
     }
 
-
-
-
-    
     footer{
-    
         padding-top: 10%;
         padding-left: 10%;
         padding-bottom: 10%;
@@ -364,7 +377,6 @@
     }
 
     #mainContainer{
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -375,7 +387,6 @@
     
   
     header{
-
         padding: 5%;
         background-color: #ffffff;
         display: grid;
@@ -466,9 +477,15 @@
             justify-content: space-around;
         }
 
+        &-cartouche{
+            display: flex;
+            width: 45%;
+            flex-wrap: nowrap;
+        }
+
         &-bulle{
-            
             position: relative;   /* permet d'exploiter le z-index */
+            z-index: 1;
             margin-top: 5%;
             border-radius: 15px;
             background-color: #ffffff;
@@ -476,34 +493,37 @@
             display: grid;
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
-            width: 45%;
+            width: 100%;
             box-shadow: 1px 4px 3px #e7e7e7;
 
             &:hover{
 
                 .carte-bulle__titre{
-                    z-index: 0;
                     width: 60%;
                 }
                 .carte-bulle__prix{
                     transform: translateX(-100%);
                     border-bottom-right-radius: 0;
-                    border-top-right-radius: 0;
-                    z-index: 1;        
+                    border-top-right-radius: 0;     
                 }
 
                 .carte-bulle__complement{
-                    z-index: 0;
                     width: 75%;
                 }
 
-                .carte-bulle__ticked{
+                .carte-bulle__endRight{
                     opacity: 1;
                 }
 
-                .ticked-rotating{
+                & +.carte-bulle__ticked{
                     opacity: 1;
-                    transform: rotate(-360deg);
+                    transform: scale(1) translateX(-31px);
+                    z-index: 1;
+                }
+
+                & +.carte-bulle__ticked .ticked-rotating{
+                    opacity: 1;
+                    transform: rotate(360deg);
                 }
             }
 
@@ -518,50 +538,47 @@
                 white-space: nowrap;   
                 text-overflow: ellipsis;      
                 width: 80%;
-                transition: width 500ms;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
+                transition: width 500ms;                        /* TRANSITION */
             }
 
             &__prix{
                 grid-column: 3;
                 grid-row: 1 / 6;
-                
                 font-size: 0.9em;
                 font-weight: bold;               
-                
                 background-color: #ffffff;
-
+                z-index: 0;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
-
                 padding-bottom: 13px;
-                
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
                 transition: transform 500ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
-
             }
 
             &__ticked{
-                grid-column: 3;
-                grid-row: 1 / 6;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 background-color: #99e2d0;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 500ms;
-
+                margin-top: 5%;
+                height: 4em;
+                width: 1%;
+                transform: scale(0.1);
+                transform-origin: right;
+                transition: opacity 100ms, transform 500ms;     /* TRANSITION */
+                
                 .ticked-rotating{
                     background-color: #99e2d0;
                     color: white;
                     opacity: 0;
-                    transition: opacity 500ms, transform 500ms 200ms;
+                    transition: opacity 500ms, transform 500ms 200ms;       /* TRANSITION */
                 }
             }
 
@@ -575,8 +592,19 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;  
                 width: 100%;
-                transition: width 500ms;
+                transition: width 500ms;                /* TRANSITION */
                 border-bottom-left-radius: 15px;  
+            }
+
+            &__endRight{
+                grid-column: 3;
+                grid-row: 1 / 6;
+                background-color: #99e2d0;
+                opacity: 0;
+                z-index: -1;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                transition: opacity 100ms;
             }
         }
     }
@@ -615,53 +643,53 @@
     }
     
     .plat1{
-        animation: plat 1500ms 1000ms;
+        animation: plat 500ms;
         animation-fill-mode: backwards;
     }
     
     .plat2{
-        animation: plat 1500ms 1500ms;
+        animation: plat 500ms 500ms;
         animation-fill-mode: backwards;
     }
     
     .plat3{
-        animation: plat 1500ms 2000ms;
+        animation: plat 500ms 1000ms;
         animation-fill-mode: backwards;
     }
 
     .plat4{
-        animation: plat 1500ms 2500ms;
+        animation: plat 500ms 1500ms;
         animation-fill-mode: backwards;
     }
 
     .plat5{
-        animation: plat 1500ms 3000ms;
+        animation: plat 500ms 2000ms;
         animation-fill-mode: backwards;
     }
 
     .plat6{
-        animation: plat 1500ms 3500ms;
+        animation: plat 500ms 2500ms;
         animation-fill-mode: backwards;
     }
 
     .plat7{
-        animation: plat 1500ms 4000ms;
+        animation: plat 500ms 3000ms;
         animation-fill-mode: backwards;
 
     }
 
     .plat8{
-        animation: plat 1500ms 4500ms;
+        animation: plat 500ms 3500ms;
         animation-fill-mode: backwards;
     }
 
     .plat9{
-        animation: plat 1500ms 5000ms;
+        animation: plat 500ms 4000ms;
         animation-fill-mode: backwards;
     }
 
     .plat10{
-        animation: plat 1500ms 5500ms;
+        animation: plat 500ms 4500ms;
         animation-fill-mode: backwards;
     }
     
@@ -699,7 +727,7 @@
     }
 }
 
-@media (min-width: 991.98px) and (max-width: 1880px) { 
+@media (min-width: 991.98px){ 
     
     body{
         font-family: Roboto, Courier, monospace, Arial;
@@ -716,7 +744,6 @@
     }
 
     #mainContainer{
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -727,7 +754,6 @@
     
   
     header{
-
         padding: 5%;
         background-color: #ffffff;
         display: grid;
@@ -823,9 +849,16 @@
             margin-bottom: 10%;
         }
 
+        &-cartouche{
+            display: flex;
+            width: 30%;
+            flex-wrap: nowrap;
+        }
+
         &-bulle{
             
             position: relative;   /* permet d'exploiter le z-index */
+            z-index: 1;
             margin-top: 5%;
             border-radius: 15px;
             background-color: #ffffff;
@@ -833,34 +866,37 @@
             display: grid;
             grid-template-columns: 3fr 1fr 1fr;
             grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
-            width: 30%;
+            width: 100%;
             box-shadow: 1px 4px 3px #e7e7e7;
 
             &:hover{
 
                 .carte-bulle__titre{
-                    z-index: 0;
                     width: 60%;
                 }
                 .carte-bulle__prix{
                     transform: translateX(-100%);
                     border-bottom-right-radius: 0;
-                    border-top-right-radius: 0;
-                    z-index: 1;        
+                    border-top-right-radius: 0;     
                 }
 
                 .carte-bulle__complement{
-                    z-index: 0;
                     width: 75%;
                 }
 
-                .carte-bulle__ticked{
+                .carte-bulle__endRight{
                     opacity: 1;
                 }
 
-                .ticked-rotating{
+                & +.carte-bulle__ticked{
                     opacity: 1;
-                    transform: rotate(-360deg);
+                    transform: translateX(-47px);
+                    z-index: 1;
+                }
+
+                & +.carte-bulle__ticked .ticked-rotating{
+                    opacity: 1;
+                    transform: rotate(360deg);
                 }
             }
 
@@ -875,50 +911,46 @@
                 white-space: nowrap;   
                 text-overflow: ellipsis;      
                 width: 80%;
-                transition: width 500ms;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
+                transition: width 500ms;                        /* TRANSITION */
             }
 
             &__prix{
                 grid-column: 3;
                 grid-row: 1 / 6;
-                
                 font-size: 0.9em;
                 font-weight: bold;               
-                
                 background-color: #ffffff;
-
+                z-index: 0;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
-
                 padding-bottom: 13px;
-                
                 border-bottom-right-radius: 15px;
                 border-top-right-radius: 15px;
                 transition: transform 500ms, border-bottom-right-radius 400ms, border-top-right-radius 400ms;
-
             }
 
             &__ticked{
-                grid-column: 3;
-                grid-row: 1 / 6;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
                 background-color: #99e2d0;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 opacity: 0;
-                transition: opacity 500ms;
-
+                margin-top: 5%;
+                height: 4em;
+                width: 10%;
+                transform-origin: right;
+                transition: opacity 100ms, transform 500ms;     /* TRANSITION */
+                
                 .ticked-rotating{
                     background-color: #99e2d0;
                     color: white;
                     opacity: 0;
-                    transition: opacity 500ms, transform 500ms 200ms;
+                    transition: opacity 500ms, transform 500ms 200ms;       /* TRANSITION */
                 }
             }
 
@@ -932,8 +964,19 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;  
                 width: 100%;
-                transition: width 500ms;
+                transition: width 500ms;                /* TRANSITION  */
                 border-bottom-left-radius: 15px;  
+            }
+
+            &__endRight{
+                grid-column: 3;
+                grid-row: 1 / 6;
+                background-color: #99e2d0;
+                opacity: 0;
+                z-index: -1;
+                border-bottom-right-radius: 15px;
+                border-top-right-radius: 15px;
+                transition: opacity 100ms;
             }
         }
     }

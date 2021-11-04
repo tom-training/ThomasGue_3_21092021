@@ -891,7 +891,7 @@
     margin-right: 2%;
   }
 }
-@media (min-width: 991.99px) and (max-width: 1880px) {
+@media (min-width: 991.99px) {
   body {
     font-family: Roboto, Courier, monospace, Arial;
     box-sizing: border-box;
