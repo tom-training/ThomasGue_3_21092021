@@ -246,7 +246,7 @@
     padding: 1% 5% 1% 5%;
   }
   .lieu-bouton {
-    margin: 5% 35% 12% 35%;
+    margin: 5% 15% 12% 15%;
     background: linear-gradient(135deg, #FF79DA, #9356DC);
     padding: 3%;
     color: white;
@@ -632,6 +632,10 @@
     animation-fill-mode: backwards;
   }
 
+  .nonDisplay {
+    display: none;
+  }
+
   button, input {
     background: none;
     border: none;
@@ -670,8 +674,6 @@
     padding-bottom: 2%;
   }
   .lieu-lequel__ville {
-    /* display: flex;
-    align-items: center; */
     height: 100%;
   }
   .lieu-lequel__ville i {
@@ -688,7 +690,7 @@
     padding: 1% 5% 1% 5%;
   }
   .lieu-bouton {
-    margin: 5% 15% 5% 15%;
+    margin: 5% 35% 5% 35%;
     padding: 3%;
     color: white;
     background: linear-gradient(135deg, #eb72da, #ad5edb);
@@ -707,7 +709,7 @@
     width: 90%;
     align-self: center;
   }
-  .fonction h1 {
+  .fonction h2 {
     font-family: Roboto;
     margin-bottom: 4%;
     text-align: center;
@@ -771,7 +773,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .restau h1 {
+  .restau h2 {
     font-family: Roboto;
     margin-bottom: 5%;
     margin-left: 5%;
@@ -1079,6 +1081,10 @@
     animation-fill-mode: backwards;
   }
 
+  .nonDisplay {
+    display: none;
+  }
+
   button, input {
     background: none;
     border: none;
@@ -1135,7 +1141,7 @@
     padding: 1% 5% 1% 5%;
   }
   .lieu-bouton {
-    margin: 2% 15% 3% 15%;
+    margin: 2% 35% 3% 35%;
     background: linear-gradient(135deg, #eb72da, #ad5edb);
     padding: 2%;
     color: white;
@@ -1154,7 +1160,7 @@
     width: 90%;
     align-self: center;
   }
-  .fonction h1 {
+  .fonction h2 {
     font-family: Roboto;
     margin-bottom: 3%;
   }
@@ -1217,7 +1223,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .restau h1 {
+  .restau h2 {
     align-self: flex-start;
     font-family: Roboto;
     margin-bottom: 3%;

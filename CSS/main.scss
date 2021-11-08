@@ -299,7 +299,7 @@
         }
     
         &-bouton{
-            margin: 5% 35% 12% 35%;
+            margin: 5% 15% 12% 15%;
             background: linear-gradient(135deg, $couleurSecondaire, $couleurPrimaire);
             @include boutonRose;
 
@@ -794,6 +794,10 @@
         animation: apparition 1000ms 3500ms;
         animation-fill-mode: backwards;
     }
+
+    .nonDisplay{
+        display: none;
+    }
     
       button, input
     {
@@ -821,7 +825,6 @@
     }
     
     .lieu{
-    
         text-align: center;
         background-color: #f6f6f6;
         width: 100%;
@@ -837,9 +840,7 @@
             padding-top: 2%;
             padding-bottom: 2%;
     
-            &__ville{ 
-                /* display: flex;
-                align-items: center; */
+            &__ville{
                 height: 100%;
 
                 i{
@@ -862,7 +863,7 @@
         }
     
         &-bouton{
-            margin: 5% 15% 5% 15%;
+            margin: 5% 35% 5% 35%;
             padding: 3%;
             color: white;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
@@ -884,7 +885,7 @@
         width: 90%;
         align-self: center;
         
-        h1{
+        h2{
             font-family: Roboto;
             margin-bottom: 4%;
             text-align: center;
@@ -968,7 +969,7 @@
         flex-direction: column;
         align-items: center;
         
-        h1{
+        h2{
             font-family: Roboto;
             margin-bottom: 5%;
             margin-left: 5%;
@@ -1356,6 +1357,10 @@
         animation: apparition 1000ms 3500ms;
         animation-fill-mode: backwards;
     }
+
+    .nonDisplay{
+        display: none;
+    }
     
       button, input
     {
@@ -1432,7 +1437,7 @@
         }
     
         &-bouton{
-            margin: 2% 15% 3% 15%;
+            margin: 2% 35% 3% 35%;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
             @include boutonRose;
         }
@@ -1447,7 +1452,7 @@
         align-self: center;
        
         
-        h1{
+        h2{
             font-family: Roboto;
             margin-bottom: 3%;
         }
@@ -1525,7 +1530,7 @@
         flex-direction: column;
         align-items: center;
         
-        h1{
+        h2{
             align-self: flex-start;
             font-family: Roboto;
             margin-bottom: 3%;
