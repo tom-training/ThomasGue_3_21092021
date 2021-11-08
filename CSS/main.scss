@@ -21,7 +21,7 @@
         text-decoration: none;
     }
 
-    $couleurPrimaire: #9356DC;
+    $couleurPrimaire: #9356DC; 
     $couleurSecondaire: #FF79DA;
     $couleurTertiaire: #99E2D0;
 
@@ -71,7 +71,6 @@
             transform: scaleX(1);
             opacity: 1;
         }
-    
     }
 
     @keyframes titreOhMy {
@@ -93,12 +92,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    position: absolute;
+        
+    position: fixed;
     left: 0;
     top: 0;
-
-    animation: disparition 1000ms 9000ms;
+    
+    animation: disparition 1000ms 2500ms;
     animation-fill-mode: forwards;
     }
 
@@ -113,7 +112,7 @@
             color: $couleurPrimaire;
             margin-right: 2%;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms;
+            animation: titreOhMy 500ms;
             animation-fill-mode: backwards;
         }
 
@@ -121,14 +120,14 @@
             color: $couleurSecondaire;
             margin-right: 2%;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms 1500ms;
+            animation: titreOhMy 500ms 500ms;
             animation-fill-mode: backwards;
         }
 
         &-trois{    
             color: $couleurTertiaire;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms 3000ms;
+            animation: titreOhMy 500ms 1500ms;
             animation-fill-mode: backwards;
         }
     }
@@ -150,7 +149,7 @@
         background-color: $couleurPrimaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms;
+        animation: barDeProgression 500ms;
         animation-fill-mode: backwards;
     }
     
@@ -161,7 +160,7 @@
         background-color: $couleurSecondaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms 1500ms;
+        animation: barDeProgression 500ms 500ms;
         animation-fill-mode: backwards;
     }
     
@@ -172,7 +171,7 @@
         background-color: $couleurTertiaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms 3000ms;
+        animation: barDeProgression 500ms 1500ms;
         animation-fill-mode: backwards;
     }
     
@@ -180,15 +179,12 @@
         font-size: 1em;
         font-weight: bold;
         margin-left: 2%;
-    
-        animation: barDeProgression 4500ms 4500ms;
+        animation: barDeProgression 500ms 2000ms;
         animation-fill-mode: backwards;
-        
         color: darkgray;
     }
 
     .loading{
-        margin-top: 10%;
         display: flex;
         justify-content: center;
     }
@@ -202,7 +198,7 @@
         border-top-color: $couleurPrimaire;
         border-right-color: $couleurSecondaire;
         border-bottom-color: $couleurTertiaire;
-        border-left-color: $couleurPrimaire;
+        border-left-color: darkgrey;
         
         border-radius: 50%;
         animation: chargement 8s ease;
@@ -222,7 +218,7 @@
         flex-wrap: wrap;
         width: 100%;
 
-        animation: apparition 2000ms 9000ms;
+        animation: apparition 1000ms 3500ms;
         animation-fill-mode: backwards;
     }
     
@@ -304,6 +300,7 @@
 
             &:hover{
                 box-shadow: 8px 8px 8px #cacaca;
+                filter: brightness(1.1);
             }
         }
     }
@@ -352,7 +349,7 @@
                     height: 22px;
                     width: 22px;
                     border-radius: 50px;
-                    margin-right: 5%;
+                    margin-right: 2%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -371,7 +368,7 @@
                 }
         
                 i{
-                    margin-right: 10%;
+                    margin-right: 5%;
                     color: #7e7e7e;    
                 }
         
@@ -664,11 +661,11 @@
     align-items: center;
     flex-direction: column;
 
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 
-    animation: disparition 1000ms 9000ms;
+    animation: disparition 1000ms 2500ms;
     animation-fill-mode: forwards;
     }
 
@@ -683,7 +680,7 @@
             color: $couleurPrimaire;
             margin-right: 2%;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms;
+            animation: titreOhMy 500ms;
             animation-fill-mode: backwards;
         }
 
@@ -691,14 +688,14 @@
             color: $couleurSecondaire;
             margin-right: 2%;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms 1500ms;
+            animation: titreOhMy 500ms 500ms;
             animation-fill-mode: backwards;
         }
 
         &-trois{    
             color: $couleurTertiaire;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms 3000ms;
+            animation: titreOhMy 500ms 1000ms;
             animation-fill-mode: backwards;
         }
     }
@@ -720,7 +717,7 @@
         background-color: $couleurPrimaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms;
+        animation: barDeProgression 500ms;
         animation-fill-mode: backwards;
     }
     
@@ -731,7 +728,7 @@
         background-color: $couleurSecondaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms 1500ms;
+        animation: barDeProgression 500ms 500ms;
         animation-fill-mode: backwards;
     }
     
@@ -742,7 +739,7 @@
         background-color: $couleurTertiaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms 3000ms;
+        animation: barDeProgression 500ms 1000ms;
         animation-fill-mode: backwards;
     }
     
@@ -751,14 +748,13 @@
         font-weight: bold;
         margin-left: 2%;
        
-        animation: barDeProgression 4500ms 4500ms;
+        animation: barDeProgression 500ms 1500ms;
         animation-fill-mode: backwards;
 
         color: darkgray;
     }
     
     .loading{
-        margin-top: 10%;
         display: flex;
         justify-content: center;
     }
@@ -772,7 +768,7 @@
         border-top-color: $couleurPrimaire;
         border-right-color: $couleurSecondaire;
         border-bottom-color: $couleurTertiaire;
-        border-left-color: $couleurPrimaire;
+        border-left-color: darkgray;
         
         border-radius: 50%;
         animation: chargement 8s ease;
@@ -790,7 +786,7 @@
         flex-direction: column;
         flex-wrap: wrap;
 
-        animation: apparition 2000ms 9000ms;
+        animation: apparition 1000ms 3500ms;
         animation-fill-mode: backwards;
     }
     
@@ -804,8 +800,8 @@
     header{
         text-align: center;
         width: 100%;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
 
         #logo{
             width: 50%;
@@ -824,7 +820,7 @@
         text-align: center;
         background-color: #f6f6f6;
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     
         &-lequel{
             background-color: #eaeaea;
@@ -870,6 +866,7 @@
 
             &:hover{
                 box-shadow: 8px 8px 8px #cacaca;
+                filter: brightness(1.1);
             }
         }
     }
@@ -878,13 +875,13 @@
     
         background-color: #ffffff;
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
         width: 90%;
         align-self: center;
         
         h1{
             font-family: Roboto;
-            margin-bottom: 7%;
+            margin-bottom: 4%;
             text-align: center;
         }
     
@@ -906,7 +903,7 @@
                 width: 35%;
                 border-radius: 20px;
                 background-color: #f6f6f6;
-                margin-bottom: 5%;
+                margin-bottom: 4%;
                 height: 60px;
 
                 box-shadow: 3px 4px 2px #e6e6e6;
@@ -959,7 +956,7 @@
         background-color: #f6f6f6;
         
         padding-top: 5%;
-        padding-bottom: 5%;
+        padding-bottom: 1%;
         width: 100%;
 
         display: flex;
@@ -1105,7 +1102,7 @@
     
     footer{
     
-        padding: 7% 5% 7% 5%;
+        padding: 3% 5% 3% 5%;
         color: white;
         background-color:#353535;
         overflow: hidden;
@@ -1140,6 +1137,8 @@
     body{
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
+        max-width: 1520px;
+        margin: auto;
     }
 
     *{
@@ -1155,6 +1154,7 @@
     $couleurPrimaire: #9356DC;
     $couleurSecondaire: #FF79DA;
     $couleurTertiaire: #99E2D0;
+    
 
 
     @keyframes disparition{
@@ -1224,11 +1224,11 @@
     align-items: center;
     flex-direction: column;
 
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 
-    animation: disparition 1000ms 9000ms;
+    animation: disparition 1000ms 2500ms;
     animation-fill-mode: forwards;
     }
 
@@ -1243,7 +1243,7 @@
             color: $couleurPrimaire;
             margin-right: 2%;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms;
+            animation: titreOhMy 500ms;
             animation-fill-mode: backwards;
         }
 
@@ -1251,14 +1251,14 @@
             color: $couleurSecondaire;
             margin-right: 2%;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms 1500ms;
+            animation: titreOhMy 500ms 500ms;
             animation-fill-mode: backwards;
         }
 
         &-trois{    
             color: $couleurTertiaire;
             transform-origin: 0% 50%;
-            animation: titreOhMy 1500ms 3000ms;
+            animation: titreOhMy 500ms 1000ms;
             animation-fill-mode: backwards;
         }
     }
@@ -1280,7 +1280,7 @@
         background-color: $couleurPrimaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms;
+        animation: barDeProgression 500ms;
         animation-fill-mode: backwards;
     }
     
@@ -1291,7 +1291,7 @@
         background-color: $couleurSecondaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms 1500ms;
+        animation: barDeProgression 500ms 500ms;
         animation-fill-mode: backwards;
     }
     
@@ -1302,7 +1302,7 @@
         background-color: $couleurTertiaire;
         transform-origin: 0% 50%;
     
-        animation: barDeProgression 1500ms 3000ms;
+        animation: barDeProgression 500ms 1000ms;
         animation-fill-mode: backwards;
     }
     
@@ -1310,14 +1310,13 @@
         font-size: 1em;
         font-weight: bold;
         margin-left: 2%;
-        animation: barDeProgression 4500ms 4500ms;
+        animation: barDeProgression 500ms 1500ms;
         animation-fill-mode: backwards;
 
         color: darkgray;
     }
     
     .loading{
-        margin-top: 10%;
         display: flex;
         justify-content: center;
     }
@@ -1331,7 +1330,7 @@
         border-top-color: $couleurPrimaire;
         border-right-color: $couleurSecondaire;
         border-bottom-color: $couleurTertiaire;
-        border-left-color: $couleurPrimaire;
+        border-left-color: darkgray;
         
         border-radius: 50%; 
         animation: chargement 8s ease;
@@ -1349,7 +1348,7 @@
         flex-direction: column;
         flex-wrap: wrap;
 
-        animation: apparition 2000ms 9000ms;
+        animation: apparition 1000ms 3500ms;
         animation-fill-mode: backwards;
     }
     
@@ -1359,19 +1358,12 @@
         border: none;
         font: inherit;	
     }
-    
-    /*
-    h1, h2, h3, h4
-    {
-        font-family: Shrikhand, Courier, monospace, Arial;
-    }
-    */
         
     header{
         text-align: center;
         width: 100%;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-top: 3%;
+        padding-bottom: 3%;
 
         #logo{
             width: 50%;
@@ -1394,11 +1386,11 @@
     
         &:hover{
             box-shadow: 8px 8px 8px #cacaca;
+            filter: brightness(1.1);
         }
     }
 
     .lieu{
-    
         text-align: center;
         background-color: #f6f6f6;
         width: 100%;
@@ -1406,17 +1398,13 @@
     
         &-lequel{
             background-color: #eaeaea;
-            
             box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
             display: flex;
             justify-content: center;
             padding-top: 2%;
             padding-bottom: 2%;
     
             &__ville{ 
-                /* display: flex;
-                align-items: center; */
                 height: 100%;
                 font-size: 1.2em;
 
@@ -1428,7 +1416,7 @@
         }
     
         &-slogan{
-            padding: 5% 5% 5% 5%;
+            padding: 3% 5% 3% 5%;
             font-size: 1.5rem;
             font-weight: bold;
             font-family: Roboto;
@@ -1439,7 +1427,7 @@
         }
     
         &-bouton{
-            margin: 5% 15% 5% 15%;
+            margin: 2% 15% 3% 15%;
             background: linear-gradient(135deg, #eb72da, #ad5edb);
             @include boutonRose;
         }
@@ -1456,7 +1444,7 @@
         
         h1{
             font-family: Roboto;
-            margin-bottom: 5%;
+            margin-bottom: 3%;
         }
     
         &-lesBulles{
@@ -1535,7 +1523,7 @@
         h1{
             align-self: flex-start;
             font-family: Roboto;
-            margin-bottom: 5%;
+            margin-bottom: 3%;
             margin-left: 5%;
         }
         
@@ -1549,7 +1537,7 @@
             &__etiquette{
         
                 border-radius: 20px;
-                margin-bottom: 10%;
+                margin-bottom: 5%;
                 overflow: hidden;
                 margin-right: 2%;
                 margin-left: 2%;
@@ -1664,14 +1652,14 @@
     
     footer{
     
-        padding: 2% 5% 5% 5%;
+        padding: 2% 5% 3% 5%;
         color: white;
         background-color:#353535;
         overflow: hidden;
 
         h1{
             font-size: 1.5em;
-            margin-bottom: 1%;
+            margin-bottom: 2%;
             font-family: Shrikhand, Courier, monospace, Arial;
         }
     
@@ -1690,6 +1678,69 @@
     
         i{
             margin-right: 2%;
+        }
+    }
+
+    @media (min-width: 1000px){
+        footer{
+    
+            padding: 2% 5% 3% 5%;
+            color: white;
+            background-color:#353535;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+    
+            h1{
+                font-size: 1.5em;
+                margin-bottom: 4%;
+                font-family: Shrikhand, Courier, monospace, Arial;
+                grid-row: 1;
+                grid-column: 2 / 4;
+                text-align: center;
+            }
+        
+            p{
+                
+                margin-bottom: 1%;
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+    
+                    &:hover{
+                        color: #c27bb4;
+                    }
+                }
+            }
+       
+            i{
+                margin-right: 2%;
+            }
+
+            .propose{
+                grid-row: 2;
+                grid-column: 1;
+                text-align: center;
+            }
+
+            .partenaire{
+                grid-row: 2;
+                grid-column: 2;
+                text-align: center;
+            }
+
+            .mentions{
+                grid-row: 2;
+                grid-column: 3;
+                text-align: center;
+            }
+
+            .contact{
+                grid-row: 2;
+                grid-column: 4;
+                text-align: center;
+            }
         }
     }
 }

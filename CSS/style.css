@@ -73,10 +73,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    animation: disparition 1000ms 9000ms;
+    animation: disparition 1000ms 2500ms;
     animation-fill-mode: forwards;
   }
 
@@ -91,20 +91,20 @@
     color: #9356DC;
     margin-right: 2%;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms;
+    animation: titreOhMy 500ms;
     animation-fill-mode: backwards;
   }
   .titreLauncher-deux {
     color: #FF79DA;
     margin-right: 2%;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms 1500ms;
+    animation: titreOhMy 500ms 500ms;
     animation-fill-mode: backwards;
   }
   .titreLauncher-trois {
     color: #99E2D0;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms 3000ms;
+    animation: titreOhMy 500ms 1500ms;
     animation-fill-mode: backwards;
   }
 
@@ -122,7 +122,7 @@
     width: 30%;
     background-color: #9356DC;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms;
+    animation: barDeProgression 500ms;
     animation-fill-mode: backwards;
   }
 
@@ -131,7 +131,7 @@
     width: 30%;
     background-color: #FF79DA;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms 1500ms;
+    animation: barDeProgression 500ms 500ms;
     animation-fill-mode: backwards;
   }
 
@@ -140,7 +140,7 @@
     width: 30%;
     background-color: #99E2D0;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms 3000ms;
+    animation: barDeProgression 500ms 1500ms;
     animation-fill-mode: backwards;
   }
 
@@ -148,13 +148,12 @@
     font-size: 1em;
     font-weight: bold;
     margin-left: 2%;
-    animation: barDeProgression 4500ms 4500ms;
+    animation: barDeProgression 500ms 2000ms;
     animation-fill-mode: backwards;
     color: darkgray;
   }
 
   .loading {
-    margin-top: 10%;
     display: flex;
     justify-content: center;
   }
@@ -167,7 +166,7 @@
     border-top-color: #9356DC;
     border-right-color: #FF79DA;
     border-bottom-color: #99E2D0;
-    border-left-color: #9356DC;
+    border-left-color: darkgrey;
     border-radius: 50%;
     animation: chargement 8s ease;
   }
@@ -183,7 +182,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    animation: apparition 2000ms 9000ms;
+    animation: apparition 1000ms 3500ms;
     animation-fill-mode: backwards;
   }
 
@@ -251,6 +250,7 @@
   }
   .lieu-bouton:hover {
     box-shadow: 8px 8px 8px #cacaca;
+    filter: brightness(1.1);
   }
 
   .fonction {
@@ -287,7 +287,7 @@
     height: 22px;
     width: 22px;
     border-radius: 50px;
-    margin-right: 5%;
+    margin-right: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,7 +303,7 @@
     color: #1f1d1f;
   }
   .fonction-lesBulles__bulle i {
-    margin-right: 10%;
+    margin-right: 5%;
     color: #7e7e7e;
   }
   .fonction-lesBulles__bulle:hover {
@@ -515,10 +515,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    animation: disparition 1000ms 9000ms;
+    animation: disparition 1000ms 2500ms;
     animation-fill-mode: forwards;
   }
 
@@ -533,20 +533,20 @@
     color: #9356DC;
     margin-right: 2%;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms;
+    animation: titreOhMy 500ms;
     animation-fill-mode: backwards;
   }
   .titreLauncher-deux {
     color: #FF79DA;
     margin-right: 2%;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms 1500ms;
+    animation: titreOhMy 500ms 500ms;
     animation-fill-mode: backwards;
   }
   .titreLauncher-trois {
     color: #99E2D0;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms 3000ms;
+    animation: titreOhMy 500ms 1000ms;
     animation-fill-mode: backwards;
   }
 
@@ -564,7 +564,7 @@
     width: 30%;
     background-color: #9356DC;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms;
+    animation: barDeProgression 500ms;
     animation-fill-mode: backwards;
   }
 
@@ -573,7 +573,7 @@
     width: 30%;
     background-color: #FF79DA;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms 1500ms;
+    animation: barDeProgression 500ms 500ms;
     animation-fill-mode: backwards;
   }
 
@@ -582,7 +582,7 @@
     width: 30%;
     background-color: #99E2D0;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms 3000ms;
+    animation: barDeProgression 500ms 1000ms;
     animation-fill-mode: backwards;
   }
 
@@ -590,13 +590,12 @@
     font-size: 1em;
     font-weight: bold;
     margin-left: 2%;
-    animation: barDeProgression 4500ms 4500ms;
+    animation: barDeProgression 500ms 1500ms;
     animation-fill-mode: backwards;
     color: darkgray;
   }
 
   .loading {
-    margin-top: 10%;
     display: flex;
     justify-content: center;
   }
@@ -609,7 +608,7 @@
     border-top-color: #9356DC;
     border-right-color: #FF79DA;
     border-bottom-color: #99E2D0;
-    border-left-color: #9356DC;
+    border-left-color: darkgray;
     border-radius: 50%;
     animation: chargement 8s ease;
   }
@@ -624,7 +623,7 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    animation: apparition 2000ms 9000ms;
+    animation: apparition 1000ms 3500ms;
     animation-fill-mode: backwards;
   }
 
@@ -637,8 +636,8 @@
   header {
     text-align: center;
     width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
   header #logo {
     width: 50%;
@@ -655,7 +654,7 @@
     text-align: center;
     background-color: #f6f6f6;
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
   .lieu-lequel {
     background-color: #eaeaea;
@@ -693,18 +692,19 @@
   }
   .lieu-bouton:hover {
     box-shadow: 8px 8px 8px #cacaca;
+    filter: brightness(1.1);
   }
 
   .fonction {
     background-color: #ffffff;
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     width: 90%;
     align-self: center;
   }
   .fonction h1 {
     font-family: Roboto;
-    margin-bottom: 7%;
+    margin-bottom: 4%;
     text-align: center;
   }
   .fonction-lesBulles {
@@ -721,7 +721,7 @@
     width: 35%;
     border-radius: 20px;
     background-color: #f6f6f6;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
     height: 60px;
     box-shadow: 3px 4px 2px #e6e6e6;
     text-decoration: none;
@@ -760,7 +760,7 @@
   .restau {
     background-color: #f6f6f6;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 1%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -867,7 +867,7 @@
   }
 
   footer {
-    padding: 7% 5% 7% 5%;
+    padding: 3% 5% 3% 5%;
     color: white;
     background-color: #353535;
     overflow: hidden;
@@ -895,6 +895,8 @@
   body {
     font-family: Roboto, Courier, monospace, Arial;
     box-sizing: border-box;
+    max-width: 1520px;
+    margin: auto;
   }
 
   * {
@@ -960,10 +962,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    animation: disparition 1000ms 9000ms;
+    animation: disparition 1000ms 2500ms;
     animation-fill-mode: forwards;
   }
 
@@ -978,20 +980,20 @@
     color: #9356DC;
     margin-right: 2%;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms;
+    animation: titreOhMy 500ms;
     animation-fill-mode: backwards;
   }
   .titreLauncher-deux {
     color: #FF79DA;
     margin-right: 2%;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms 1500ms;
+    animation: titreOhMy 500ms 500ms;
     animation-fill-mode: backwards;
   }
   .titreLauncher-trois {
     color: #99E2D0;
     transform-origin: 0% 50%;
-    animation: titreOhMy 1500ms 3000ms;
+    animation: titreOhMy 500ms 1000ms;
     animation-fill-mode: backwards;
   }
 
@@ -1009,7 +1011,7 @@
     width: 30%;
     background-color: #9356DC;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms;
+    animation: barDeProgression 500ms;
     animation-fill-mode: backwards;
   }
 
@@ -1018,7 +1020,7 @@
     width: 30%;
     background-color: #FF79DA;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms 1500ms;
+    animation: barDeProgression 500ms 500ms;
     animation-fill-mode: backwards;
   }
 
@@ -1027,7 +1029,7 @@
     width: 30%;
     background-color: #99E2D0;
     transform-origin: 0% 50%;
-    animation: barDeProgression 1500ms 3000ms;
+    animation: barDeProgression 500ms 1000ms;
     animation-fill-mode: backwards;
   }
 
@@ -1035,13 +1037,12 @@
     font-size: 1em;
     font-weight: bold;
     margin-left: 2%;
-    animation: barDeProgression 4500ms 4500ms;
+    animation: barDeProgression 500ms 1500ms;
     animation-fill-mode: backwards;
     color: darkgray;
   }
 
   .loading {
-    margin-top: 10%;
     display: flex;
     justify-content: center;
   }
@@ -1054,7 +1055,7 @@
     border-top-color: #9356DC;
     border-right-color: #FF79DA;
     border-bottom-color: #99E2D0;
-    border-left-color: #9356DC;
+    border-left-color: darkgray;
     border-radius: 50%;
     animation: chargement 8s ease;
   }
@@ -1069,7 +1070,7 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    animation: apparition 2000ms 9000ms;
+    animation: apparition 1000ms 3500ms;
     animation-fill-mode: backwards;
   }
 
@@ -1079,17 +1080,11 @@
     font: inherit;
   }
 
-  /*
-  h1, h2, h3, h4
-  {
-      font-family: Shrikhand, Courier, monospace, Arial;
-  }
-  */
   header {
     text-align: center;
     width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
   header #logo {
     width: 50%;
@@ -1118,8 +1113,6 @@
     padding-bottom: 2%;
   }
   .lieu-lequel__ville {
-    /* display: flex;
-    align-items: center; */
     height: 100%;
     font-size: 1.2em;
   }
@@ -1128,7 +1121,7 @@
     height: 100%;
   }
   .lieu-slogan {
-    padding: 5% 5% 5% 5%;
+    padding: 3% 5% 3% 5%;
     font-size: 1.5rem;
     font-weight: bold;
     font-family: Roboto;
@@ -1137,7 +1130,7 @@
     padding: 1% 5% 1% 5%;
   }
   .lieu-bouton {
-    margin: 5% 15% 5% 15%;
+    margin: 2% 15% 3% 15%;
     background: linear-gradient(135deg, #eb72da, #ad5edb);
     padding: 2%;
     color: white;
@@ -1146,6 +1139,7 @@
   }
   .lieu-bouton:hover {
     box-shadow: 8px 8px 8px #cacaca;
+    filter: brightness(1.1);
   }
 
   .fonction {
@@ -1157,7 +1151,7 @@
   }
   .fonction h1 {
     font-family: Roboto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
   .fonction-lesBulles {
     width: 100%;
@@ -1221,7 +1215,7 @@
   .restau h1 {
     align-self: flex-start;
     font-family: Roboto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     margin-left: 5%;
   }
   .restau-lesEtiq {
@@ -1232,7 +1226,7 @@
   }
   .restau-lesEtiq__etiquette {
     border-radius: 20px;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     overflow: hidden;
     margin-right: 2%;
     margin-left: 2%;
@@ -1321,14 +1315,14 @@
   }
 
   footer {
-    padding: 2% 5% 5% 5%;
+    padding: 2% 5% 3% 5%;
     color: white;
     background-color: #353535;
     overflow: hidden;
   }
   footer h1 {
     font-size: 1.5em;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     font-family: Shrikhand, Courier, monospace, Arial;
   }
   footer p {
@@ -1343,6 +1337,58 @@
   }
   footer i {
     margin-right: 2%;
+  }
+}
+@media (min-width: 991.99px) and (min-width: 1000px) {
+  footer {
+    padding: 2% 5% 3% 5%;
+    color: white;
+    background-color: #353535;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  footer h1 {
+    font-size: 1.5em;
+    margin-bottom: 4%;
+    font-family: Shrikhand, Courier, monospace, Arial;
+    grid-row: 1;
+    grid-column: 2/4;
+    text-align: center;
+  }
+  footer p {
+    margin-bottom: 1%;
+  }
+  footer p a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  footer p a:hover {
+    color: #c27bb4;
+  }
+  footer i {
+    margin-right: 2%;
+  }
+  footer .propose {
+    grid-row: 2;
+    grid-column: 1;
+    text-align: center;
+  }
+  footer .partenaire {
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+  }
+  footer .mentions {
+    grid-row: 2;
+    grid-column: 3;
+    text-align: center;
+  }
+  footer .contact {
+    grid-row: 2;
+    grid-column: 4;
+    text-align: center;
   }
 }
 
