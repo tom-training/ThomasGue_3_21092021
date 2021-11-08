@@ -186,6 +186,10 @@
     animation-fill-mode: backwards;
   }
 
+  .nonDisplay {
+    display: none;
+  }
+
   button, input {
     background: none;
     border: none;
@@ -226,6 +230,7 @@
   }
   .lieu-lequel__ville {
     height: 100%;
+    font-weight: lighter;
   }
   .lieu-lequel__ville i {
     margin-right: 1em;

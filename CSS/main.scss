@@ -221,6 +221,10 @@
         animation: apparition 1000ms 3500ms;
         animation-fill-mode: backwards;
     }
+
+    .nonDisplay{
+        display: none;
+    }
     
       button, input       /* MODIF MODIF MODIF MODIF         effacer input  */
     {
@@ -274,6 +278,7 @@
             &__ville{ 
               
                 height: 100%;
+                font-weight: lighter;
 
                 i{
                     margin-right: 1em;
