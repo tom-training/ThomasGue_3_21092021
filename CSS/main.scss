@@ -299,7 +299,7 @@
         }
     
         &-bouton{
-            margin: 5% 15% 12% 15%;
+            margin: 5% 35% 12% 35%;
             background: linear-gradient(135deg, $couleurSecondaire, $couleurPrimaire);
             @include boutonRose;
 
@@ -323,7 +323,7 @@
         align-items: center;
        
         
-        h1{
+        h2{
             font-family: Roboto;
             margin-bottom: 7%;
             align-self: flex-start;
@@ -403,7 +403,7 @@
         flex-direction: column;
         align-items: center;
         
-        h1{
+        h2{
             font-family: Roboto;
             margin-bottom: 5%;
             margin-left: 5%;

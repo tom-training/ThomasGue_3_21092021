@@ -246,7 +246,7 @@
     padding: 1% 5% 1% 5%;
   }
   .lieu-bouton {
-    margin: 5% 15% 12% 15%;
+    margin: 5% 35% 12% 35%;
     background: linear-gradient(135deg, #FF79DA, #9356DC);
     padding: 3%;
     color: white;
@@ -268,7 +268,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .fonction h1 {
+  .fonction h2 {
     font-family: Roboto;
     margin-bottom: 7%;
     align-self: flex-start;
@@ -327,7 +327,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .restau h1 {
+  .restau h2 {
     font-family: Roboto;
     margin-bottom: 5%;
     margin-left: 5%;
