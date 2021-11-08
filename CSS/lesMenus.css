@@ -599,6 +599,8 @@
     z-index: 1;
     transform: scale(1) translateX(-38px);
   }
+
+  /* liste de timing de départs */
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) and (max-width: 600px) {
   .carte-bulle:hover + .carte-bulle__ticked {
@@ -766,61 +768,61 @@
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat1 {
-    animation: plat 500ms;
+    animation: plat 250ms 0ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat2 {
-    animation: plat 500ms 500ms;
+    animation: plat 250ms 250ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat3 {
-    animation: plat 500ms 1000ms;
+    animation: plat 250ms 500ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat4 {
-    animation: plat 500ms 1500ms;
+    animation: plat 250ms 750ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat5 {
-    animation: plat 500ms 2000ms;
+    animation: plat 250ms 1000ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat6 {
-    animation: plat 500ms 2500ms;
+    animation: plat 250ms 1250ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat7 {
-    animation: plat 500ms 3000ms;
+    animation: plat 250ms 1500ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat8 {
-    animation: plat 500ms 3500ms;
+    animation: plat 250ms 1750ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat9 {
-    animation: plat 500ms 4000ms;
+    animation: plat 250ms 2000ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 575.99px) and (max-width: 991.98px) {
   .plat10 {
-    animation: plat 500ms 4500ms;
+    animation: plat 250ms 2250ms;
     animation-fill-mode: backwards;
   }
 }
@@ -1026,6 +1028,8 @@
     z-index: 1;
     transform: translateX(-36px);
   }
+
+  /* liste de timing de départs */
 }
 @media (min-width: 991.98px) and (min-width: 991.98px) and (max-width: 1000px) {
   .carte-bulle:hover + .carte-bulle__ticked {
@@ -1183,61 +1187,61 @@
 }
 @media (min-width: 991.98px) {
   .plat1 {
-    animation: plat 1500ms 1000ms;
+    animation: plat 250ms 0ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat2 {
-    animation: plat 1500ms 1500ms;
+    animation: plat 250ms 250ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat3 {
-    animation: plat 1500ms 2000ms;
+    animation: plat 250ms 500ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat4 {
-    animation: plat 1500ms 2500ms;
+    animation: plat 250ms 750ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat5 {
-    animation: plat 1500ms 3000ms;
+    animation: plat 250ms 1000ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat6 {
-    animation: plat 1500ms 3500ms;
+    animation: plat 250ms 1250ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat7 {
-    animation: plat 1500ms 4000ms;
+    animation: plat 250ms 1500ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat8 {
-    animation: plat 1500ms 4500ms;
+    animation: plat 250ms 1750ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat9 {
-    animation: plat 1500ms 5000ms;
+    animation: plat 250ms 2000ms;
     animation-fill-mode: backwards;
   }
 }
 @media (min-width: 991.98px) {
   .plat10 {
-    animation: plat 1500ms 5500ms;
+    animation: plat 250ms 2250ms;
     animation-fill-mode: backwards;
   }
 }
