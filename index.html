@@ -24,7 +24,7 @@
         
         </div> 
 
-        <div class="progressBar"> 
+        <div class="progressBar nonDisplay"> 
 
             <div class="progressBar-primaire"> </div>
             <div class="progressBar-secondaire"> </div>
@@ -42,36 +42,23 @@
     <div id="mainContainer">
         
         <header> 
-            <img id="logo" src="images/logo/ohmyfood.png" alt="logo d'OhMyFood"/>         
+            <h1>
+                <img id="logo" src="images/logo/ohmyfood.png" alt="logo d'OhMyFood"/>   
+            </h1>          
         </header>
         
         <main>
-
-            <h1 class="nonDisplay"> Le titre </h1>
         
             <section class="lieu">
 
-                <h2 class="nonDisplay"> Paris, Belleville </h2>
-        
-                <article class="lieu-lequel">
-
-                    <h3 class="nonDisplay"> Paris </h3>
-        
-                    <p class="lieu-lequel__ville">
-                        <i class="fas fa-map-marker-alt"> </i>
-                        Paris, Belleville
-                    </p>
-
+                <h2 class="lieu-lequel"> <i class="fas fa-map-marker-alt"> </i> Paris, Belleville </h2>
+    
+                <article class="lieu-slogan">
+                    <h3> Réservez le menu qui vous convient</h3>
                 </article>
-            
-                <h3 class="lieu-slogan"> Réservez le menu qui vous convient</h3>
-            
-                <!-- L'article n'est nécesssaire, il faut simplement mettre un paragraphe -->
+        
                 <article class="lieu-message">
-
-                    <h3 class="nonDisplay"> Découvrez des restaurants </h3>
-
-                    <p> Découvrez des restaurants d'exception, sélectionnés par nos soins. </p>
+                    <h3 class="lieu-message__titre"> Découvrez des restaurants d'exception, sélectionnés par nos soins. </h3>
                 </article>
         
                 <a href="#restaurants">
@@ -83,9 +70,6 @@
             <section class="fonction">
 
                 <h2> Fonctionnement </h2>
-        
-                <!-- Les articles ne sont pas la balise à utiliser pour regrouper les éléments, il faut regarder du coté des
-                div et span, attention les éléments sont cliquables (liens)-->
                 
                 <div class="fonction-lesBulles">
                     <a href="" class="fonction-lesBulles__bulle">
@@ -110,9 +94,7 @@
             <section class="restau">
                 <h2 id="restaurants"> Restaurants </h2>
 
-                <article class="restau-lesEtiq">
-
-                    <h3 class="nonDisplay"> Les restaurants </h3>
+                <div class="restau-lesEtiq">
 
                     <a href="laPalette.html" class="restau-lesEtiq__etiquette">
 
@@ -200,17 +182,13 @@
             
                         </div>
                     </a>
-
-                </article>
-        
-                
-        
+                </div>
             </section>
         </main>
 
         <footer>
     
-            <h1> ohmyfood</h1>
+            <h2> ohmyfood</h2>
     
             <p class="propose"> <a href=""> <i class="fas fa-utensils"> </i> Proposer un restaurant </a> </p>
             <p class="partenaire"> <a href=""> <i class="fas fa-hands-helping"> </i> Devenir partenaire </a>  </p>
