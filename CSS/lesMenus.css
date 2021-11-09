@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* media query 1/3 pour les mobiles */
 @media (max-width: 575.98px) {
   body {
     font-family: Roboto, Courier, monospace, Arial;
@@ -25,6 +26,7 @@
     width: 100%;
   }
 
+  /* Le logo OhMyFood avec la flèche pour retourner vers la page index */
   header {
     padding: 5%;
     background-color: #ffffff;
@@ -46,6 +48,7 @@
     text-decoration: none;
   }
 
+  /* Ce bloc va gérer la répartition entre la photo du restau et la carte des menus en dessous */
   main {
     width: 100%;
   }
@@ -55,6 +58,7 @@
     object-fit: cover;
   }
 
+  /* Ce bloc arrive juste en-dessouns de la photo du restau et inclue la carte des menus */
   .menu {
     background-color: #f6f6f6;
     padding: 10% 5% 15% 5%;
@@ -65,19 +69,24 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
   }
-  .menu > h2 {
+  .menu-nomRestau {
     width: 90%;
-    font-family: Shrikhand, Courier, monospace, Arial;
-    font-size: 1.4em;
     display: flex;
     justify-content: space-between;
+    /* Ce bloc permet de gérer le changement d'icone en hover du coeur vide 
+    vers le coeur rempli rose */
   }
-  .menu > h2 .lesCoeurs {
+  .menu-nomRestau h2 {
+    font-family: Shrikhand, Courier, monospace, Arial;
+    font-size: 1.4em;
+  }
+  .menu-nomRestau .lesCoeurs {
     margin-left: 4%;
     width: 5%;
     position: relative;
+    align-self: baseline;
   }
-  .menu > h2 .lesCoeurs .coeurVide {
+  .menu-nomRestau .lesCoeurs .coeurVide {
     color: black;
     z-index: 1;
     opacity: 1;
@@ -85,8 +94,9 @@
     position: absolute;
     left: 0;
     top: 0;
+    font-size: 1.3em;
   }
-  .menu > h2 .lesCoeurs .coeurPlein {
+  .menu-nomRestau .lesCoeurs .coeurPlein {
     color: plum;
     position: absolute;
     left: 0;
@@ -94,12 +104,13 @@
     z-index: -1;
     opacity: 0;
     transition: opacity 500ms;
+    font-size: 1.3em;
   }
-  .menu > h2 .lesCoeurs:hover .coeurPlein {
+  .menu-nomRestau .lesCoeurs:hover .coeurPlein {
     z-index: 1;
     opacity: 1;
   }
-  .menu > h2 .lesCoeurs:hover .coeurVide {
+  .menu-nomRestau .lesCoeurs:hover .coeurVide {
     z-index: -1;
     opacity: 0;
   }
@@ -158,6 +169,8 @@
     z-index: 1;
     transform: scale(1) translateX(-54px);
   }
+
+  /* exemple d'utilisation de mixin */
 
   /* liste de timing de départs */
 }
@@ -411,7 +424,7 @@
     color: white;
     background-color: #353535;
   }
-  footer h1 {
+  footer h2 {
     font-size: 1em;
     margin-bottom: 5%;
     font-family: Shrikhand, Courier, monospace, Arial;
@@ -496,19 +509,24 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
   }
-  .menu > h2 {
+  .menu-nomRestau {
     width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    /* Ce bloc permet de gérer le changement d'icone en hover du coeur vide 
+    vers le coeur rempli rose */
+  }
+  .menu-nomRestau h2 {
     font-family: Shrikhand, Courier, monospace, Arial;
     font-size: 1.4em;
-    display: flex;
-    justify-content: space-between;
   }
-  .menu > h2 .lesCoeurs {
+  .menu-nomRestau .lesCoeurs {
     margin-left: 4%;
     width: 5%;
     position: relative;
+    align-self: baseline;
   }
-  .menu > h2 .lesCoeurs .coeurVide {
+  .menu-nomRestau .lesCoeurs .coeurVide {
     color: black;
     z-index: 1;
     opacity: 1;
@@ -517,7 +535,7 @@
     left: 0;
     top: 0;
   }
-  .menu > h2 .lesCoeurs .coeurPlein {
+  .menu-nomRestau .lesCoeurs .coeurPlein {
     color: plum;
     position: absolute;
     left: 0;
@@ -526,11 +544,11 @@
     opacity: 0;
     transition: opacity 500ms;
   }
-  .menu > h2 .lesCoeurs:hover .coeurPlein {
+  .menu-nomRestau .lesCoeurs:hover .coeurPlein {
     z-index: 1;
     opacity: 1;
   }
-  .menu > h2 .lesCoeurs:hover .coeurVide {
+  .menu-nomRestau .lesCoeurs:hover .coeurVide {
     z-index: -1;
     opacity: 0;
   }
@@ -835,7 +853,7 @@
     color: white;
     background-color: #353535;
   }
-  footer h1 {
+  footer h2 {
     font-size: 1em;
     margin-bottom: 3%;
     font-family: Shrikhand, Courier, monospace, Arial;
@@ -925,18 +943,20 @@
     max-width: 1500px;
     margin: auto;
   }
-  .menu > h2 {
+  .menu-nomRestau {
     width: 100%;
-    font-family: Shrikhand, Courier, monospace, Arial;
-    font-size: 1.4em;
     display: flex;
   }
-  .menu > h2 .lesCoeurs {
+  .menu-nomRestau h2 {
+    font-family: Shrikhand, Courier, monospace, Arial;
+    font-size: 1.4em;
+  }
+  .menu-nomRestau .lesCoeurs {
     margin-left: 4%;
     width: 5%;
     position: relative;
   }
-  .menu > h2 .lesCoeurs .coeurVide {
+  .menu-nomRestau .lesCoeurs .coeurVide {
     color: black;
     z-index: 1;
     opacity: 1;
@@ -945,7 +965,7 @@
     left: 0;
     top: 0;
   }
-  .menu > h2 .lesCoeurs .coeurPlein {
+  .menu-nomRestau .lesCoeurs .coeurPlein {
     color: plum;
     position: absolute;
     left: 0;
@@ -954,11 +974,11 @@
     opacity: 0;
     transition: opacity 500ms;
   }
-  .menu > h2 .lesCoeurs:hover .coeurPlein {
+  .menu-nomRestau .lesCoeurs:hover .coeurPlein {
     z-index: 1;
     opacity: 1;
   }
-  .menu > h2 .lesCoeurs:hover .coeurVide {
+  .menu-nomRestau .lesCoeurs:hover .coeurVide {
     z-index: -1;
     opacity: 0;
   }
@@ -1252,7 +1272,7 @@
     color: white;
     background-color: #353535;
   }
-  footer h1 {
+  footer h2 {
     font-size: 1em;
     margin-bottom: 5%;
     font-family: Shrikhand, Courier, monospace, Arial;
@@ -1281,7 +1301,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  footer h1 {
+  footer h2 {
     font-size: 1.5em;
     margin-bottom: 4%;
     font-family: Shrikhand, Courier, monospace, Arial;

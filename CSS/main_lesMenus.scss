@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
+/* media query 1/3 pour les mobiles */
 @media (max-width: 575.98px){
 
     body{
@@ -28,6 +28,7 @@
         width: 100%;
     }
     
+    /* Le logo OhMyFood avec la flèche pour retourner vers la page index */
   
     header{
         padding: 5%;
@@ -52,7 +53,7 @@
         }
     }
     
-
+    /* Ce bloc va gérer la répartition entre la photo du restau et la carte des menus en dessous */
     main{
         width: 100%;
         &>img{
@@ -62,30 +63,35 @@
         }
     }
 
+    /* Ce bloc arrive juste en-dessouns de la photo du restau et inclue la carte des menus */
+
     .menu{
         background-color: #f6f6f6;
         padding: 10% 5% 15% 5%;
         text-align: center;
-         
         position: relative;
-       
         margin-top: -30px;        
         z-index: 2; 
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
 
-        &>h2{
+        &-nomRestau{
             width: 90%;
-            font-family: Shrikhand, Courier, monospace, Arial;
-            font-size: 1.4em;
             display: flex;
             justify-content: space-between;
 
+            h2{
+                font-family: Shrikhand, Courier, monospace, Arial;
+                font-size: 1.4em;
+            }
+            
+            /* Ce bloc permet de gérer le changement d'icone en hover du coeur vide 
+            vers le coeur rempli rose */
             .lesCoeurs{
-                
                 margin-left: 4%;
                 width: 5%; 
-                position: relative; 
+                position: relative;
+                align-self: baseline;
             
                 .coeurVide{
                     color: black;
@@ -95,6 +101,7 @@
                     position: absolute;
                     left: 0;
                     top: 0;
+                    font-size: 1.3em;
                 }
     
                 .coeurPlein{
@@ -105,9 +112,9 @@
                     z-index: -1;
                     opacity: 0;
                     transition: opacity 500ms;
+                    font-size: 1.3em;
                 }
     
-            
                 &:hover{
         
                     .coeurPlein{
@@ -120,7 +127,6 @@
                         opacity: 0;
                     }
                 }
-
             }
         }
     }
@@ -321,6 +327,8 @@
         }
     }
     
+    /* exemple d'utilisation de mixin */
+
     @mixin boutonRose{
         padding: 3%;
         color: white;
@@ -340,8 +348,6 @@
         width: 60%;
         height: 50px;
         @include boutonRose;
-
-       
     }
     
     @keyframes plat{
@@ -353,7 +359,8 @@
             transform: translateY(0);
         }
     }
-
+    
+    /* liste de timing de départs */
     $depart: (  1:    0ms, 
                 2:  250ms, 
                 3:  500ms, 
@@ -364,7 +371,7 @@
                 8: 1750ms, 
                 9: 2000ms, 
                 10:2250ms
-            );   /* liste de timing de départs */
+            );   
 
     @mixin createAnimation($num){
         animation: plat 250ms map-get($depart, $num);
@@ -419,7 +426,7 @@
         color: white;
         background-color:#353535;
      
-        h1{
+        h2{
             font-size: 1em;
             margin-bottom: 5%;
             font-family: Shrikhand, Courier, monospace, Arial;
@@ -494,7 +501,6 @@
     
 
     main{
-
         width: 100%;
 
         &>img{
@@ -516,18 +522,23 @@
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
 
-        &>h2{
+        &-nomRestau{
             width: 90%;
-            font-family: Shrikhand, Courier, monospace, Arial;
-            font-size: 1.4em;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
 
+            h2{
+                font-family: Shrikhand, Courier, monospace, Arial;
+                font-size: 1.4em;
+            }
+
+            /* Ce bloc permet de gérer le changement d'icone en hover du coeur vide 
+            vers le coeur rempli rose */
             .lesCoeurs{
-                
                 margin-left: 4%;
                 width: 5%; 
                 position: relative; 
+                align-self: baseline;
             
                 .coeurVide{
                     color: black;
@@ -549,7 +560,6 @@
                     transition: opacity 500ms;
                 }
     
-            
                 &:hover{
         
                     .coeurPlein{
@@ -562,7 +572,6 @@
                         opacity: 0;
                     }
                 }
-
             }
         }
 
@@ -848,7 +857,6 @@
     }
     
     footer{
-    
         padding-top: 3%;
         padding-left: 5%;
         padding-bottom: 3%;
@@ -856,7 +864,7 @@
         color: white;
         background-color:#353535;
      
-        h1{
+        h2{
             font-size: 1em;
             margin-bottom: 3%;
             font-family: Shrikhand, Courier, monospace, Arial;
@@ -864,6 +872,7 @@
 
         p{
             margin-bottom: 2%;
+
             a{
                 text-decoration: none;
                 color: #ffffff;
@@ -924,7 +933,6 @@
         a{
             color: #5a5a5a;
             grid-column: 1;
-            
             display: flex;
             align-items: center;
             text-decoration: none;
@@ -933,7 +941,6 @@
     
 
     main{
-
         width: 100%;
         background-color: #f6f6f6;
 
@@ -947,13 +954,10 @@
     .menu{
         background-color: #f6f6f6;
         padding: 3% 5% 3% 5%;
-        
         display: flex;
         flex-direction: column;
         align-items: center;
-         
         position: relative;
-       
         margin-top: -30px;        
         z-index: 2; 
         border-top-left-radius: 25px;
@@ -961,14 +965,16 @@
         max-width: 1500px;
         margin: auto;
 
-        &>h2{
+        &-nomRestau{
             width: 100%;
-            font-family: Shrikhand, Courier, monospace, Arial;
-            font-size: 1.4em;
             display: flex;
 
+            h2{
+                font-family: Shrikhand, Courier, monospace, Arial;
+                font-size: 1.4em;
+            }
+
             .lesCoeurs{
-                
                 margin-left: 4%;
                 width: 5%; 
                 position: relative; 
@@ -1049,7 +1055,6 @@
         }
 
         &-bulle{
-            
             position: relative;   /* permet d'exploiter le z-index */
             z-index: 1;
             margin-top: 5%;
@@ -1109,9 +1114,6 @@
                     @media (min-width: 1750.01px) and (max-width: 2000px){
                         transform: translateX(-54px);
                     }
-
-
-
                 }
 
                 & +.carte-bulle__ticked .ticked-rotating{
@@ -1237,7 +1239,8 @@
             transform: translateY(0);
         }
     }
-
+    
+    /* liste de timing de départs */
     $depart: (  1:    0ms, 
                 2:  250ms, 
                 3:  500ms, 
@@ -1248,7 +1251,7 @@
                 8: 1750ms, 
                 9: 2000ms, 
                 10:2250ms
-            );   /* liste de timing de départs */
+            );   
 
     @mixin createAnimation($num){
         animation: plat 250ms map-get($depart, $num);
@@ -1301,7 +1304,7 @@
         color: white;
         background-color:#353535;
      
-        h1{
+        h2{
             font-size: 1em;
             margin-bottom: 5%;
             font-family: Shrikhand, Courier, monospace, Arial;
@@ -1326,7 +1329,6 @@
 
     @media (min-width: 1000px){
         footer{
-    
             padding: 2% 5% 3% 5%;
             color: white;
             background-color:#353535;
@@ -1335,7 +1337,7 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
     
-            h1{
+            h2{
                 font-size: 1.5em;
                 margin-bottom: 4%;
                 font-family: Shrikhand, Courier, monospace, Arial;
@@ -1345,7 +1347,6 @@
             }
         
             p{
-                
                 margin-bottom: 1%;
                 a{
                     text-decoration: none;
