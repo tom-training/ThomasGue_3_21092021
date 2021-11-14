@@ -1024,8 +1024,12 @@
     body{
         font-family: Roboto, Courier, monospace, Arial;
         box-sizing: border-box;
-        max-width: 1520px;
+        max-width: 1920px;
         margin: auto;
+        
+        
+        
+        
     }
 
     *{
@@ -1217,6 +1221,7 @@
         background-color: #f6f6f6;
         width: 100%;
         margin-bottom: 5%;
+        
     
         &-lequel{
             background-color: #eaeaea;
